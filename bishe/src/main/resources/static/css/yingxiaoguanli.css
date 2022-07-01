@@ -1,0 +1,170 @@
+#yxdiv02{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+    height: 1000px;
+    background: #f5f5f5;
+    border-radius: 25px;
+}
+
+#yxdiv03{
+    position: absolute;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    left: 5%;
+    width: 90%;
+    background: white;
+    border-radius: 5px;
+}
+
+#yxdiv04{
+    position: absolute;
+    margin-bottom: 10px;
+    left: 5%;
+    width: 90%;
+    background: white;
+    border-radius: 5px;
+    margin-top: 100px;
+}
+
+#cjd{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 100px;
+    height: 50px;
+    background: #A78230;
+    border-radius: 5px 5px;
+}
+
+#cwp{
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    width: 100px;
+    height: 50px;
+    background: #A78230;
+    border-radius: 5px 5px;
+}
+
+.yxdivs{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    left: 10%;
+    width: 80%;
+    height: 150px;
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+
+.wpdivs{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    left: 10%;
+    width: 80%;
+    height: 150px;
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+
+.fjimgs{
+    position: absolute;
+    top: 10%;
+    height: 80%;
+    left: 5%;
+    width: 10%;
+}
+
+.wpimgs{
+    position: absolute;
+    top: 10%;
+    height: 80%;
+    left: 5%;
+    width: 10%;
+}
+
+.fjps01{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.wpps01{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.fjps02{
+    position: absolute;
+    top: 2%;
+    left: 60%;
+    font-size: 16px;
+}
+
+.wpps02{
+    position: absolute;
+    top: 2%;
+    left: 60%;
+    font-size: 16px;
+}
+
+.fjps03{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    font-size: 16px;
+}
+
+.wpps03{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    font-size: 16px;
+}
+
+
+.yxinputs{
+    position: absolute;
+    top: 58%;
+    height: 15%;
+    left: 68%;
+    width: 10%;
+}
+
+.wpinputs{
+    position: absolute;
+    top: 58%;
+    height: 15%;
+    left: 68%;
+    width: 10%;
+}
+
+.yxbs{
+    position: absolute;
+    top: 60%;
+    left: 85%;
+    height: 25%;
+    width: 10%;
+    color: whitesmoke;
+    background: red;
+    border-radius: 10px;
+}
+
+.wpbs{
+    position: absolute;
+    top: 60%;
+    left: 85%;
+    height: 25%;
+    width: 10%;
+    color: whitesmoke;
+    background: red;
+    border-radius: 10px;
+}

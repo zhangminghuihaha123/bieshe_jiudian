@@ -1,0 +1,9 @@
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+    static-path-pattern: /static/**
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    cache: false

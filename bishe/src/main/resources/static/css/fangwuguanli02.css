@@ -1,0 +1,528 @@
+body{
+    overflow-y: hidden;
+}
+#fwpdiv01{
+    position: absolute;
+    top: 3%;
+    left: 0%;
+    width: 10%;
+    height: 8%;
+    background: black;
+    color: white;
+}
+#fwpdiv02{
+    position: absolute;
+    top: 27%;
+    left: 0%;
+    width: 10%;
+    height: 8%;
+    background: black;
+    color: white;
+}
+#fwpdiv03{
+    position: absolute;
+    top: 51%;
+    left: 0%;
+    width: 10%;
+    height: 8%;
+    background: black;
+    color: white;
+}
+#fwpdiv04{
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 10%;
+    height: 8%;
+    background: black;
+    color: white;
+}
+#ftdiv01{
+    position: absolute;
+    top: 11%;
+    left: 0%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv02{
+    position: absolute;
+    top: 11%;
+    left: 8%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv03{
+    position: absolute;
+    top: 11%;
+    left: 16%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv04{
+    position: absolute;
+    top: 11%;
+    left: 24%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv05{
+    position: absolute;
+    top: 11%;
+    left: 32%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv06{
+    position: absolute;
+    top: 11%;
+    left: 40%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv07{
+    position: absolute;
+    top: 11%;
+    left: 48%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv08{
+    position: absolute;
+    top: 11%;
+    left: 56%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv09{
+    position: absolute;
+    top: 11%;
+    left: 64%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv10{
+    position: absolute;
+    top: 11%;
+    left: 72%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv11{
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv12{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv13{
+    position: absolute;
+    top: 35%;
+    left: 16%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv14{
+    position: absolute;
+    top: 35%;
+    left: 24%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv15{
+    position: absolute;
+    top: 35%;
+    left: 32%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv16{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv17{
+    position: absolute;
+    top: 35%;
+    left: 48%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv18{
+    position: absolute;
+    top: 35%;
+    left: 56%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv19{
+    position: absolute;
+    top: 35%;
+    left: 64%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv20{
+    position: absolute;
+    top: 35%;
+    left: 72%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv21{
+    position: absolute;
+    top: 59%;
+    left: 0%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv22{
+    position: absolute;
+    top: 59%;
+    left: 8%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv23{
+    position: absolute;
+    top: 59%;
+    left: 16%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv24{
+    position: absolute;
+    top: 59%;
+    left: 24%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv25{
+    position: absolute;
+    top: 59%;
+    left: 32%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv26{
+    position: absolute;
+    top: 59%;
+    left: 40%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv27{
+    position: absolute;
+    top: 59%;
+    left: 48%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv28{
+    position: absolute;
+    top: 59%;
+    left: 56%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv29{
+    position: absolute;
+    top: 59%;
+    left: 64%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv30{
+    position: absolute;
+    top: 59%;
+    left: 72%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv31{
+    position: absolute;
+    top: 83%;
+    left: 0%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv32{
+    position: absolute;
+    top: 83%;
+    left: 8%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv33{
+    position: absolute;
+    top: 83%;
+    left: 16%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv34{
+    position: absolute;
+    top: 83%;
+    left: 24%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv35{
+    position: absolute;
+    top: 83%;
+    left: 32%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv36{
+    position: absolute;
+    top: 83%;
+    left: 40%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv37{
+    position: absolute;
+    top: 83%;
+    left: 48%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv38{
+    position: absolute;
+    top: 83%;
+    left: 56%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv39{
+    position: absolute;
+    top: 83%;
+    left: 64%;
+    width: 8%;
+    height: 15%;
+    background: blue;
+    border: 5px solid white;
+}
+#ftdiv40{
+    position: absolute;
+    top: 83%;
+    left: 72%;
+    width: 8%;
+    height: 15%;
+    background: #0000ff;
+    border: 5px solid #ffffff;
+}
+#fjpzdiv01{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+}
+#fxxgdiv01{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    line-height: 55px;
+}
+#table01{
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+#table02{
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+#fwglbutton01{
+    position: absolute;
+    top: 90%;
+    left: 30%;
+    width: 10%;
+    height: 5%;
+}
+#fwglbutton02{
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    width: 10%;
+    height: 5%;
+}
+#fwselect01,#fwselect02,#fwselect03,#fwselect04,#fwselect05,#fwselect06,#fwselect07,#fwselect08,#fwselect09,#fwselect10,
+#fwselect11,#fwselect12,#fwselect13,#fwselect14,#fwselect15,#fwselect16,#fwselect17,#fwselect18,#fwselect19,#fwselect20,
+#fwselect21,#fwselect22,#fwselect23,#fwselect24,#fwselect25,#fwselect26,#fwselect27,#fwselect28,#fwselect29,#fwselect30,
+#fwselect31,#fwselect32,#fwselect33,#fwselect34,#fwselect35,#fwselect36,#fwselect37,#fwselect38,#fwselect39,#fwselect40{
+    width: 100px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.i{
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+.j{
+    font-size: 18px;
+    font-weight: bold;
+}
+.fwglspan{
+    position: absolute;
+    top: 80%;
+    left: 35%;
+    font-size: 16px;
+    font-weight: bold;
+    color: orange;
+}
+.fwimg{
+    position: absolute;
+    top: 30%;
+    height: 50%;
+    left: 25%;
+    width: 50%;
+}
+#fwdiv01{
+    position: absolute;
+    top: -1000px;
+    left: 600px;
+    height: 50%;
+    width: 30%;
+    background: white;
+    border-radius: 25px;
+}
+.fwp{
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    left: 40%;
+}
+#fwpp01{
+    position: absolute;
+    top: 5%;
+}
+#fwpp02{
+    position: absolute;
+    top: 20%;
+}
+#fwpp03{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    font-weight: bold;
+    font-size: 18px;
+}
+#fwpp04{
+    position: absolute;
+    top: 50%;
+}
+#fwpp05{
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    font-weight: bold;
+    font-size: 18px;
+}
+#fwpp06{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    font-weight: bold;
+    font-size: 18px;
+}
+#fwdiv02{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 35%;
+    background: #1cd4ec;
+    border-radius: 25px;
+}

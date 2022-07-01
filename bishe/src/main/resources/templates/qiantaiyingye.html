@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script th:src="@{/static/js/JqueryAjax/JQuery.js}" type="text/javascript"></script>
+    <link rel="stylesheet" th:href="@{/static/css/qiantaiyingye.css}">
+    <script type="text/javascript" th:src="@{/static/js/TestJs/qiantaiyingye.js}"></script>
+</head>
+<body>
+<div id="qtyydiv01">
+    <img id="qtyyimg01" th:src="@{/static/img/qiantaiyingye/a.png}">
+    <div id="qtyydiv02">
+      <p id="qtyyp01" style="color: #212121;position: absolute;left: 45%;top: 0%;font-size: 36px">前台营业</p>
+        <p id="qtyyp02" style="font-size: 18px;position: absolute;top: 2%;left: 82%;color: black" onclick="qtyy01()">点击返回</p>
+        <img id="qtyyimg03" th:src="@{/static/img/qiantaiyingye/c.png}" onclick="qtyy05()">
+        <p  style="font-size: 15px;position: absolute;top: 10%;left: 9%;" onclick="qtyy05()">房间配置</p>
+        <img id="qtyyimg04" th:src="@{/static/img/qiantaiyingye/c.png}" onclick="qtyy06()">
+        <p  style="font-size: 15px;position: absolute;top: 10%;left: 18%;" onclick="qtyy06()">商品信息</p>
+        <img id="qtyyimg05" th:src="@{/static/img/qiantaiyingye/c.png}" onclick="qtyy07()">
+        <p  style="font-size: 15px;position: absolute;top: 10%;left: 27%;" onclick="qtyy07()">合作伙伴</p>
+        <div id="qtyydiv03">
+            <div id="fjpz">
+                <img id="qtyyimg07" th:src="@{/static/img/qiantaiyingye/e.png}" onclick="qtyy02()">
+                <img id="qtyyimg08" th:src="@{/static/img/qiantaiyingye/e.png}" onclick="qtyy03()">
+                <p id="qtyyp07">添加房型</p>
+                <p id="qtyyp08">修改房型</p>
+                <div id="qtyydiv04">
+                    <p id="qtyyp04">房间图片:</p>
+                    <input type="file" name="file" id="file"  onchange="changepic(this)" >
+                    <img id="qtyyimg06" th:src="@{/static/img/qiantaiyingye/d.png}">
+                    <p id="qtyyp05">房间类型:</p>
+                    <input type="text" id="roomstyle" onblur="qtyy10()">
+                    <p id="qtyyp06">房间价格:</p>
+                    <input type="text" id="roommoney">
+                    <span id="qtyyspan02"></span>
+                    <button id="qtyybutton01" onclick="qtyy04()">确认提交</button>
+                </div>
+                <div id="qtyydiv05" style="display: none">
+                    <p id="qtyyp09">修改图片:</p>
+                    <input type="file" name="file" id="files"  onchange="changepic2(this)" >
+                    <img id="qtyyimg09" th:src="@{/static/img/qiantaiyingye/d.png}">
+                    <p id="qtyyp10">房间类型:</p>
+                    <input type="text" id="roomstyles" onblur="qtyy09()">
+                    <span id="qtyyspan01"></span>
+                    <button id="qtyybutton02" onclick="qtyy08()">确认修改</button>
+                </div>
+            </div>
+            <div id="spxx" style="display: none">
+                <img id="qtyyimg11" th:src="@{/static/img/qiantaiyingye/e.png}" onclick="qtyy11()">
+                <img id="qtyyimg12" th:src="@{/static/img/qiantaiyingye/e.png}" onclick="qtyy12()">
+                <p id="qtyyp11">添加商品</p>
+                <p id="qtyyp12">修改商品</p>
+                <div id="qtyydiv12">
+                    <p id="qtyyp13">商品图片:</p>
+                    <input type="file" name="file" id="filess"  onchange="changepic3(this)" >
+                    <img id="qtyyimg13" th:src="@{/static/img/qiantaiyingye/d.png}">
+                    <p id="qtyyp14">商品类型:</p>
+                    <input type="text" id="foodstyle" onblur="qtyy14()">
+                    <p id="qtyyp15">商品价格:</p>
+                    <input type="text" id="foodmoney">
+                    <span id="qtyyspan03"></span>
+                    <button id="qtyybutton03" onclick="qtyy13()">确认提交</button>
+                </div>
+                <div id="qtyydiv13" style="display: none">
+                    <p id="qtyyp16">修改图片:</p>
+                    <input type="file" name="file" id="filesss"  onchange="changepic4(this)" >
+                    <img id="qtyyimg14" th:src="@{/static/img/qiantaiyingye/d.png}">
+                    <p id="qtyyp17">商品类型:</p>
+                    <input type="text" id="foodstyles" onblur="qtyy16()">
+                    <span id="qtyyspan04"></span>
+                    <button id="qtyybutton04" onclick="qtyy15()">确认修改</button>
+                </div>
+            </div>
+            <div id="hzhb" style="display: none">
+                <img id="qtyyimg15" th:src="@{/static/img/qiantaiyingye/e.png}" onclick="qtyy17()">
+                <img id="qtyyimg16" th:src="@{/static/img/qiantaiyingye/e.png}" onclick="qtyy18()">
+                <p id="qtyyp18">添加伙伴</p>
+                <p id="qtyyp19">删除伙伴</p>
+                <div id="qtyydiv14">
+                    <p id="qtyyp20">伙伴图片:</p>
+                    <input type="file" name="file" id="filee"  onchange="changepic5(this)" >
+                    <img id="qtyyimg17" th:src="@{/static/img/qiantaiyingye/d.png}">
+                    <p id="qtyyp21">伙伴店名:</p>
+                    <input type="text" id="friendname" onblur="qtyy21()">
+                    <p id="qtyyp22">平均价位:</p>
+                    <input type="text" id="friendmoney">
+                    <span id="qtyyspan05"></span>
+                    <button id="qtyybutton05" onclick="qtyy19()">确认提交</button>
+                </div>
+                <div id="qtyydiv15" style="display: none">
+                    <p id="qtyyp23">删除伙伴:</p>
+                    <input type="text" id="deletefriend" onblur="qtyy22()">
+                    <span id="qtyyspan06"></span>
+                    <button id="qtyybutton06" onclick="qtyy20()">确认修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img id="qtyyimg02" th:src="@{/static/img/qiantaiyingye/b.png}" onclick="qtyy01()">
+</div>
+</body>
+</html>

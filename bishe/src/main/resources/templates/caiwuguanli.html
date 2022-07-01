@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../static/js/JqueryAjax/JQuery.js" type="text/javascript"></script>
+    <link th:href="@{/static/css/caiwuguanli.css}" rel="stylesheet">
+    <script th:src="@{/static/js/TestJs/caiwuguanli.js}" type="text/javascript"></script>
+</head>
+<body>
+<div id="cwdiv05">
+    <p style="position: absolute;top: 10%;left: 40%;font-size: 24px">财务管理</p>
+    <button style="position: absolute;top: 30%;left: 60%;width: 6%;height: 50%;background: red;color: white;border-radius: 15px" onclick="today()">打印当日报表</button>
+    <button style="position: absolute;top: 30%;left: 70%;width: 6%;height: 50%;background: red;color: white;border-radius: 15px" onclick="toago()">打印所有报表</button>
+</div>
+<div id="cwdiv06">
+    <table class="cwt01" style="position: absolute;top: 0%;left: 5%;">
+        <th>物品</th><th>价格/（收入/支出）</th><th>交易时间</th><th>当前酒店余额</th>
+        <tr th:each="maps:${mapMoney}">
+            <td th:text="${maps.getThings()}"></td>
+            <td th:text="${maps.getCost()}"></td>
+            <td th:text="${maps.getLasttime()}"></td>
+            <td th:text="${maps.getMoney()}"></td>
+        </tr>
+    </table>
+    <p style="position: absolute;top: 80%;left: 8%;color: blue" onclick="toups()">上一页</p>
+    <p id="cwp02" style="position: absolute;top: 80%;left: 45%;" th:text="'一共'+${nums}+'条记录'"></p>
+    <p style="position: absolute;top: 80%;left: 90%;color: blue" onclick="todowns()">下一页</p>
+</div>
+<a href="/guanlicenter_index" style="position: absolute;top: 3%;left: 95%;">点此退出</a>
+<div id="cwdiv01">
+  <p id="cwp01">每日报表</p>
+    <div id="cwdiv02">
+        <p class="cwp02">净盈利</p>
+        <img class="cwimg01" th:src="@{/static/img/cwgl/a.png}">
+        <p id="cwp03" class="cwps">0</p>
+    </div>
+    <div id="cwdiv03">
+        <p class="cwp02">净获取</p>
+        <img class="cwimg01" th:src="@{/static/img/cwgl/b.png}">
+        <p id="cwp04" class="cwps">0</p>
+    </div>
+    <div id="cwdiv04">
+        <p class="cwp02">净支出</p>
+        <img class="cwimg01" th:src="@{/static/img/cwgl/c.png}">
+        <p id="cwp05" class="cwps">0</p>
+    </div>
+</div>
+<p>
+    <canvas id="canvas_circle" width="500px" height="320px" style="border:2px solid #0026ff;" >
+        浏览器不支持canvas
+    </canvas>
+</p>
+<span style="position: absolute;top: 93%;left: 46%;font-size: 24px">收入扇形统计图</span>
+</body>
+</html>

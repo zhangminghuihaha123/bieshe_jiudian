@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../static/js/JqueryAjax/JQuery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/static/css/guanliyuan_denglu.css">
+    <script src="../static/js/TestJs/guanliyuan_denglu.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="glydldiv01">
+    <img src="../static/img/guanliyuan_denglu/a.jpg" class="glydlimg01">
+    <div class="glydldiv02">
+       <h1 class="glydlh101">后台管理系统</h1>
+        <input type="text" name="name" id="name" class="glydlinput01" value="管理员账号名" onfocus="if(this.value=='管理员账号名'){this.value='';};" onblur="glydl03()"><span id="glydlspan02" class="glydlspan02"></span>
+        <input type="password" name="password" id="password" class="glydlinput02" onfocus="glydl01()" onblur="glydl04()"><span id="glydlspan01" class="glydlspan01"></span>
+        <input type="submit" class="glydlbutton01" value="确认" onclick="glydl02()">
+        <a class="glydla01" href="/index">返回用户登录</a>
+    </div>
+</div>
+</body>
+</html>

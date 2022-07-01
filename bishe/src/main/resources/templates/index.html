@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="static/css/index.css">
+    <script src="../static/js/JqueryAjax/JQuery.js" type="text/javascript"></script>
+    <script src="../static/js/TestJs/index.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="indexdiv01">
+    <img class="img01" src="../static/img/index/a.jpg">
+    <div class="indexdiv02">
+            <a class="indexa01" href="/guanyuwomen">了解我们</a>
+        <p class="indexp01">酒店管理系统</p>
+        <input type="text" id="username" name="username" class="indexinput01" value="用户名" onfocus="if(this.value=='用户名'){this.value='';};"  onblur="index02()">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span id="indexspan01"></span>
+        <input type="text" id="password" name="username" class="indexinput02" value="密码" onfocus="if(this.value=='密码'){this.value='';};" onblur="index03()">
+        <br><br><br><br><br><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span id="indexspan02"></span>
+        <a class="indexa02" id="indexa2" href="#" onclick="index01()">使用微信登录</a>
+        <div id="indexdiv03" class="indexdiv03">
+
+        </div>
+        <input type="submit" class="indexbutton01" value="登录" onclick="index04()">
+        <a class="indexa03" href="/zhuce">没有注册？点击注册</a>
+        <a class="indexa04" href="/guanliyuan_denglu">我是管理员</a>
+        <a class="indexa05" href="/wmm">忘记密码？</a>
+    </div>
+</div>
+</div>
+</body>
+</html>

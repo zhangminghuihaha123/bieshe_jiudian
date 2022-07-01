@@ -1,0 +1,446 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*height: 100vh;*/
+    overflow-x: hidden;
+    background: #f8f8f8;
+}
+.shell {
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 10px #fff solid;
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+.images {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.img{
+    width: 100%;
+    background-size: cover;
+}
+.img:nth-child(1){
+    background-image: url("/static/img/shouye/a.jpg");
+}
+.img:nth-child(2){
+    background-image: url("/static/img/shouye/b.jpg");
+}
+.img:nth-child(3){
+    background-image: url("/static/img/shouye/c.jpg");
+}
+
+.min-images {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 20px;
+    width: 40%;
+    z-index: 999;
+    right: 10%;
+}
+
+.min{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-size: cover;
+    border: solid rgba(255, 255, 255, 0.5) 5px;
+    background-position: -20px 0;
+}
+.min:nth-child(1){
+    background-image: url("/static/img/shouye/a.jpg");
+}
+.min:nth-child(2){
+    background-image: url("/static/img/shouye/b.jpg");
+}
+.min:nth-child(3){
+    background-image: url("/static/img/shouye/c.jpg");
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select:none;
+}
+
+.button-left,
+.button-right {
+    font-size: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0.5;
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 500px;
+}
+#sydiv01{
+    width: 100%;
+}
+#sydiv02{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+    background: white;
+}
+#sydiv03{
+    position:absolute;
+    top: 10%;
+    left: 4%;
+    height: 80%;
+    width: 4%;
+}
+#syp01{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 12px;
+}
+#syimg01{
+    position: absolute;
+    top: -20%;
+    width: 100%;
+    height: 100%;
+}
+#sydiv04{
+    position:absolute;
+    top: 10%;
+    left: 11%;
+    height: 80%;
+    width: 4%;
+}
+#syp02{
+    position: absolute;
+    top: 50%;
+    left: 11.8%;
+    font-size: 12px;
+}
+#syimg02{
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+}
+#sydiv05{
+    position:absolute;
+    top: 10%;
+    left: 18%;
+    height: 80%;
+    width: 4%;
+}
+#syp03{
+    position: absolute;
+    top: 50%;
+    left: 18.5%;
+    font-size: 12px;
+}
+#syimg03{
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+}
+#sys01{
+    position: absolute;
+    top: 30%;
+    left: 85%;
+    width: 8%;
+    height: 50%;
+    border-radius:25px;
+}
+#syimg04{
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    width: 3%;
+    height: 80%;
+    border-radius: 100%;
+}
+#sydiv06{
+    position: absolute;
+    top: 12%;
+    left: 77%;
+    height: 55%;
+    width: 20%;
+    background: white;
+    border-radius: 15px;
+}
+#sydiv07{
+    position: absolute;
+    top: 12%;
+    left: 2.5%;
+    height: 55%;
+    width: 20%;
+    background: white;
+    border-radius: 15px;
+}
+#syimg05{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+#syp04{
+    position: absolute;
+    top: 12%;
+    left: 38%;
+    font-size: 24px;
+}
+#syimg06{
+    position: absolute;
+    top: 26%;
+    left: 30%;
+    width: 40%;
+    height: 25%;
+    border-radius: 100%;
+}
+#syspan01{
+    position: absolute;
+    top: 52%;
+    left: 40%;
+    font-size: 12px;
+}
+#syb01{
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    width: 30%;
+    height: 10%;
+    background: red;
+    border-radius: 20px;
+}
+#syb02{
+    position: absolute;
+    top: 60%;
+    left: 52%;
+    width: 30%;
+    height: 10%;
+    background: orange;
+    border-radius: 20px;
+}
+#syp05{
+    position: absolute;
+    top: 60%;
+    left: 28%;
+    font-size: 18px;
+}
+#sydiv08{
+    position: absolute;
+    top: 15%;
+    left: 2000px;
+    height: 40%;
+    width: 30%;
+    background: white;
+    font-size: 24px;
+    border-radius: 20px;
+}
+#syspan02{
+    position: absolute;
+    top: 3%;
+    left: 95%;
+}
+#input01{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+#syimg07{
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    height: 30%;
+    width: 25%;
+    border-radius: 100%;
+}
+#syb03{
+    position: absolute;
+    top: 70%;
+    left: 42%;
+    height: 10%;
+    width: 20%;
+    background: #ef9fb1;
+}
+#syp06{
+    position: absolute;
+    top: 0%;
+    left: 34%;
+    font-size: 24px;
+}
+#syimg08{
+    position: absolute;
+    top: 10%;
+    left: 2.5%;
+    height: 5%;
+    width: 20%;
+}
+#sydiv09{
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    height: 20%;
+    width: 80%;
+    border-radius: 15px;
+    background: #ff5151;
+}
+#sydiv10{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    height: 20%;
+    width: 80%;
+    border-radius: 15px;
+    background: #fcb95a;
+}
+#sydiv11{
+    position: absolute;
+    top: 72%;
+    left: 10%;
+    height: 20%;
+    width: 80%;
+    border-radius: 15px;
+    background: #ffff00;
+}
+#sydiv12{
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    width: 80%;
+    background: white;
+    border-radius: 2%;
+}
+.zp{
+    position: relative;
+    width: 280px;
+    height: 150px;
+    left: 50px;
+}
+.zspan01{
+    position: absolute;
+    left: 26%;
+    font-size: 28px;
+    top: 16%;
+    font-weight: bold;
+}
+.zspan02{
+    position: absolute;
+    left: 32%;
+    font-size: 18px;
+    opacity: 0.5;
+    top: 65%;
+}
+.zspan03{
+    position: absolute;
+    left: 35%;
+    font-size: 18px;
+    top: 80%;
+    opacity: 0.5;
+}
+.zspan04{
+    position: absolute;
+    left: 26%;
+    font-size: 24px;
+    top: 20%;
+}
+.zspan05{
+    position: absolute;
+    left: 26%;
+    font-size: 18px;
+    opacity: 0.5;
+    top: 65%;
+}
+.zspan06{
+    position: absolute;
+    left: 26%;
+    font-size: 18px;
+    opacity: 0.5;
+    top: 80%;
+}
+.zsb01{
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    width: 15%;
+    height: 25%;
+    border-radius: 15px;
+    background: #FFC300;
+}
+.zspan07{
+    position: absolute;
+    left: 26%;
+    font-size: 18px;
+    opacity: 0.5;
+    top: 50%;
+}
+#sygg{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    height: 280px;
+    background: #eeeeee;
+    border-radius: 15px;
+    overflow-x:auto;
+    border: 1px solid #acacac;
+}
+#syp07{
+    position: absolute;
+    top: -4%;
+    left: 48%;
+    font-size: 20px;
+    color: orange;
+    font-weight: bold;
+}
+.syzb{
+    position: relative;
+    height: 73%;
+    width: 13%;
+    background: white;
+    border-radius: 15px;
+    margin-left: 80px;
+    margin-top: 50px;
+    display: inline-block;
+}
+.zbimg{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    height: 40%;
+}
+.zpspan01{
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    font-size: 12px;
+    font-weight: bold;
+}
+.zpspan02{
+    position: absolute;
+    top: 80%;
+    left: 60%;
+    font-size: 12px;
+    opacity: 0.5;
+}
+.zpspan03{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+    font-size: 12px;
+    opacity: 0.5;
+}

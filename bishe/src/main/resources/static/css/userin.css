@@ -1,0 +1,72 @@
+body{
+    background: #E8E2E0;
+}
+#uidiv01{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 50px;
+    width: 100%;
+    background: #f5f5f5;
+}
+#uidiv03{
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    height: 90%;
+    width: 70%;
+    background: white;
+    border-radius: 20px;
+}
+.uiimg01{
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    height: 120px;
+    width: 120px;
+}
+.uispan01{
+    position: absolute;
+    top: 30%;left: 18%;
+    font-weight: bold;
+}
+.uispan02{
+    position: absolute;
+    top: 30%;left: 35%;
+}
+.uispan03{
+    position: absolute;
+    top: 65%;left: 18%;
+}
+.uispan04{
+    position: absolute;
+    top: 30%;left: 50%;
+}
+.uispan05{
+    position: absolute;
+    top: 65%;left: 50%;
+}
+#uidiv04{
+    position: absolute;
+    height: 300px;
+    left: 15%;
+    width: 70%;
+    border-radius: 25px;
+    background: white;
+}
+#uidiv05{
+    position: absolute;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    color: white;
+    background: #f34a81;
+    border-radius: 5px
+}
+#uiselect01{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 10%;
+    height: 10%;
+}

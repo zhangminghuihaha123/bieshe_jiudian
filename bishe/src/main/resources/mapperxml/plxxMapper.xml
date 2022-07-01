@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.plxxDao">
+    <select id="retunRooms" resultType="com.zmh.demo.pojo.Room" parameterType="String">
+        select roomstyle,roomnum from bishe_room where roomuser=#{user};
+    </select>
+    <insert id="tocents" parameterType="String">
+        insert into bishe_usermessage(user, roomstyle, usermessages)VALUES (#{user},#{rooms},#{call});
+    </insert>
+    <select id="getPlxxOk" parameterType="String" resultType="String">
+        select roomstyle from bishe_room where roomuser=#{user} limit 0,1;
+    </select>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.gmspDao">
+     <select id="returnFoodList" resultType="com.zmh.demo.pojo.Foods">
+         SELECT foodstyle,foodmoney,foodimg FROM bishe_foods AS a LEFT JOIN bishe_foodkc AS b ON (a.foodstyle=b.food) WHERE b.foodkc>0;
+     </select>
+    <select id="returnyhkMoney" resultType="int" parameterType="String">
+        SELECT money FROM bishe_card WHERE yhkzh= (SELECT yhk FROM bishe_room WHERE roomuser =#{user} LIMIT 0,1);
+    </select>
+    <select id="returnFoodMoney" parameterType="String" resultType="int">
+        select foodmoney from bishe_foods where foodstyle=#{food};
+    </select>
+    <update id="updateMoneys">
+        update bishe_card set money=#{money} WHERE yhkzh= (SELECT yhk FROM bishe_room WHERE roomuser =#{user} LIMIT 0,1);
+    </update>
+    <insert id="InMoney1" parameterType="com.zmh.demo.pojo.Money">
+        insert into bishe_money(money, lasttime, things, cost) VALUES (#{money},#{lasttime},#{things},#{cost});
+    </insert>
+    <select id="GetMoneys" resultType="int">
+        select money from bishe_money order by id desc limit 0,1;
+    </select>
+    <select id="GetFoodKc" resultType="int" parameterType="String">
+        select foodkc from bishe_foodkc where food=#{food};
+    </select>
+    <update id="updateFoodKc">
+        update bishe_foodkc set foodkc=foodkc-${num} where food=#{food};
+    </update>
+    <insert id="InsertUserCallFood" parameterType="com.zmh.demo.pojo.Call">
+        insert into bishe_usercall(user, room, usercalls) values (#{user},#{room},#{usercalls});
+    </insert>
+    <select id="ReturnRoomsUser" parameterType="String" resultType="int">
+        select roomnum from bishe_room where roomuser=#{user} limit 0,1;
+    </select>
+</mapper>

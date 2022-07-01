@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.cwglDao">
+  <select id="getRoommoney" resultType="Integer">
+      SELECT cost FROM bishe_money WHERE cost>0 AND things IN (SELECT roomstyle FROM bishe_rooms) AND lasttime>(DATE_sub(NOW(),INTERVAL 1 DAY)) AND NOW()>lasttime;
+  </select>
+    <select id="getFoodmoney" resultType="Integer">
+       SELECT cost FROM bishe_money WHERE cost>0 AND things IN (SELECT foodstyle FROM bishe_foods) AND lasttime>(DATE_sub(NOW(),INTERVAL 1 DAY)) AND NOW()>lasttime;
+    </select>
+    <select id="getzhichus" resultType="Integer">
+        select cost from bishe_money where 0>cost AND lasttime>(DATE_sub(NOW(),INTERVAL 1 DAY)) AND NOW()>lasttime;
+    </select>
+    <select id="returnMoneys" resultType="com.zmh.demo.pojo.Money">
+        select money,lasttime,things,cost from bishe_money order by id desc limit 0,12;
+    </select>
+    <select id="returnNums" resultType="int">
+        select count(*) from bishe_money;
+    </select>
+    <select id="returnNUmMoney" resultType="com.zmh.demo.pojo.Money" parameterType="int">
+        select money,lasttime,things,cost from bishe_money order by id desc limit ${n},12;
+    </select>
+    <select id="getMOneyDay" resultType="com.zmh.demo.pojo.Money">
+        select money,lasttime,things,cost from bishe_money where lasttime>(DATE_sub(NOW(),INTERVAL 1 DAY)) AND NOW()>lasttime;
+    </select>
+    <select id="getMOneyAgo" resultType="com.zmh.demo.pojo.Money">
+        select money,lasttime,things,cost from bishe_money;
+    </select>
+</mapper>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script th:src="@{/static/js/JqueryAjax/JQuery.js}" type="text/javascript"></script>
+    <script th:src="@{/static/js/TestJs/shouye.js}" type="text/javascript"></script>
+    <link rel="stylesheet" th:href="@{/static/css/shouye.css}">
+</head>
+<body>
+<div id="sydiv01">
+    <div class="shell">
+        <ui class="images">
+            <li class="img"></li>
+            <li class="img"></li>
+            <li class="img"></li>
+        </ui>
+        <ui class="min-images">
+            <li class="min"></li>
+            <li class="min"></li>
+            <li class="min"></li>
+        </ui>
+        <div class="button">
+            <div class="button-left"><</div>
+            <div class="button-right">></div>
+        </div>
+    </div>
+    <div id="sydiv02">
+       <div id="sydiv03" onclick="sy01()" onmouseout="sy02()" onmousemove="sy11()"><img id="syimg01" th:src="@{/static/img/shouye/d.png}"></div><p id="syp01">回到首页</p>
+        <a href="#sydiv12"><div id="sydiv04"><img id="syimg02" th:src="@{/static/img/shouye/e.png}" onclick="sy09()" onmouseout="sy10()" onmousemove="sy12()"></div></a><p id="syp02">我要订房</p>
+        <div id="sydiv05" onclick="sy31()" onmouseout="sy32()" onmousemove="sy33()"><img id="syimg03" th:src="@{/static/img/shouye/f.png}"></div><p id="syp03">我要退房</p>
+        <select id="sys01"><option id="syo01" th:text="${users}"></option><option onclick="sy03()">退出当前用户</option></select>
+        <img id="syimg04" th:src="@{${imgs}}">
+    </div>
+    <div id="sydiv06">
+        <img id="syimg05" th:src="@{/static/img/shouye/h.png}">
+        <p id="syp04">Hi,你好！</p>
+        <img id="syimg06" th:src="@{${imgs}}" onclick="sy04()">
+        <span id="syspan01">(点击图片更换)</span>
+        <button id="syb01" style="display: block" onclick="sy06()">登录</button>
+        <button id="syb02" style="display: block" onclick="sy07()">注册</button>
+        <p id="syp05" th:text="${users}" style="display: none"></p>
+    </div>
+    <div id="sydiv07">
+      <p id="syp06">已入住服务</p>
+        <div id="sydiv09"><p style="text-align: center;font-size: 25px;font-weight: bold" onclick="qtfw()">前台服务</p></div>
+        <div id="sydiv10"><p style="text-align: center;font-size: 25px;font-weight: bold" onclick="gmsp()">购买商品</p></div>
+        <div id="sydiv11"><p style="text-align: center;font-size: 25px;font-weight: bold" onclick="lypl()">留言评论</p></div>
+    </div>
+    <div id="sydiv08">
+      <span id="syspan02" onclick="sy05()">x</span>
+      <input type="file" id="input01" name="input01" onchange="changepics(this)"><img id="syimg07" th:src="@{/static/img/shouye/i.png}">
+      <button id="syb03" onclick="sy08()">更换头像</button>
+    </div>
+    <img id="syimg08" th:src="@{/static/img/shouye/j.png}">
+    <div id="sydiv12">
+        <p style="position: relative;top: 0%;left: 46.5%;font-size: 24px;color: darkorange;font-weight: bold">房型预定</p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="opacity: 0.3">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><br><br><br>
+        <div th:each="fjpp:${fjzy}" class="fjs" style="position: relative">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="opacity: 0.3">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span><br><br>
+            <img th:src="@{${fjpp.getRoomimg()}}" class="zp">
+            <span th:text="${fjpp.getRoomstyle()}" class="zspan01"></span>
+            <span th:text="${fjpp.getMoney()}" class="zspan02"></span>
+            <span th:text="${fjpp.getRoomtotal()}" class="zspan03"></span>
+            <span class="zspan07">备注:</span>
+            <span class="zspan05">房间价位：</span><span class="zspan06">房间剩余数量：</span>
+            <button class="zsb01" th:id="${users}" th:value="${fjpp.getRoomstyle()}" th:name="${times}" onclick="yd(this)">点击预定</button>
+            <br><br>
+        </div>
+    </div>
+       <span style="position: absolute;top: 93%;left: 45%;font-size: 18px;color: black;">开始日期:</span><span style="position: absolute;top: 93%;left: 65%;font-size: 18px;color: black;">截至日期:</span><span style="position: absolute;top: 93%;left: 62%;font-size: 18px;color: black;">-至-</span>
+    <span style="position: absolute;top: 93.3%;left: 22%;font-size: 12px;color: black;font-weight: bold;opacity: 0.3">备注*（请选择正确的时间）</span>
+    <input type="date" id="date01" style="position:absolute;top:92%;left:50%;width: 200px;height: 40px"><input type="date" id="date02" style="position:absolute;top:92%;left:70%;width: 200px;height: 40px">
+    <img style="position: absolute;top: 92.2%;left: 58%;width: 2%;height: 5%;" th:src="@{/static/img/shouye/k.png}"><img style="position: absolute;top: 92.2%;left: 78%;width: 2%;height: 5%;" th:src="@{/static/img/shouye/k.png}">
+    <div id="sygg">
+         <p id="syp07">附近周边</p>
+        <div class="syzb" th:each="fris:${frs}">
+             <img th:src="@{${fris.getFriendimg()}}" class="zbimg">
+             <span th:text="${fris.getFriendname()}" class="zpspan01"></span>
+             <span class="zpspan03">平均价位:</span>
+             <span th:text="${fris.getFriendmoney()}" class="zpspan02"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    let left = document.querySelector(".button-left")
+    let right = document.querySelector(".button-right")
+    let min = document.querySelectorAll(".min")
+    let images = document.querySelector(".images")
+    // 我们先设置一个index用来计算和控制图片的位置，再设置一个time作为定时器
+    let index = 0
+    let time
+    // 在这里我们先创建一个position为复用函数，作用就是结合index来定义当前图片的位置的
+    function position() {
+        images.style.left = (index * -100) + "%"
+    }
+    // 然后我们创建一个复用函数add为加函数，如果当前图片的位置值index大于等于当前图片数量的话，就说明超出了计算范围，所以得清零，如若不然index就加一
+    function add() {
+        if (index >= min.length-1) {
+            index = 0
+        } else {
+            index++
+        }
+    }
+    // 反之desc为减函数，如果当前图片的位置值index小于1了，那么他的值就反弹到最顶端，也就是轮播图的最后面，如若不然index就减一
+    function desc() {
+        if (index < 1) {
+            index = min.length-1
+        } else {
+            index--
+        }
+    }
+    // 创建一个timer来当做复用时间的函数，，每隔3秒钟index就加一，然后加入增加add函数和desc函数来判断一下，再加入定位函数
+    function timer(){
+        time = setInterval(() => {
+            index++
+            desc()
+            add()
+            position()
+        }, 3000)
+    }
+    // 接下来我们设置一下按钮，left为左边的按钮，因为点击时图片会反方向倒退，所以我们套入desc减函数进去，顺便定位一下
+    // 当然，点击的时候我们必须先把定时器给停掉再重新执行一遍，不然会在你点击下一张图片时，定时器倒计时一到也跟着生效，这样子就会连跳两张图片了
+    left.addEventListener("click", () => {
+        desc()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    // 右边的按钮和左边也是差不多
+    right.addEventListener("click", () => {
+        add()
+        position()
+        clearInterval(time)
+        timer()
+    })
+    // 在弄好左右两个按钮的时候，我们还需要生效下面的小图片按钮，
+    // 首先我们先遍历一遍，然后获取当前点击的那个小图片按钮的值并赋值给index，这样子就可以随之跳转
+    for (let i = 0; i < min.length; i++) {
+        min[i].addEventListener("click", () => {
+            index = i
+            position()
+            clearInterval(time)
+            timer()
+        })
+    }
+    // 最后的最后我们将定时器开起来，这样子图片就可以自动轮播啦，如果还不明白多练几遍就会了，将其理解进去，吸取精华所在，反复咀嚼，加油，感谢你的观看，我们下期再见
+    timer()
+</script>
+</html>

@@ -1,0 +1,155 @@
+.contain {
+    position: absolute;
+    margin: auto;
+    width: 2000px;
+    height: 430px;
+    text-align: center;
+    font-family: Arial;
+    color: #FFF;
+}
+.contain ul{
+    margin:10px 0;
+    padding:0;
+    width: 6000px;
+    transition:all 0.5s;
+}
+.contain li{
+    float: left;
+    width: 2000px;
+    height: 430px;
+    list-style: none;
+    line-height: 200px;
+    font-size: 24px;
+}
+.sildeInput-1{
+    background: #9fa8ef;
+}
+
+.sildeInput-2{
+    background: #ef9fb1;
+}
+
+.sildeInput-3 {
+    background: #9fefc3;
+}
+.label1{
+    position: absolute;
+    bottom: 10px;
+    left: 43%;
+    width: 2%;
+    height: 10%;
+    margin: 0 10px;
+    line-height: 20px;
+    color: #FFF;
+    background: #000;
+    cursor: pointer;
+    text-align: center;
+}/*用于调整单选框的属性以及位置*/
+.label2{
+    position: absolute;
+    bottom: 10px;
+    left: 48%;
+    width: 2%;
+    height: 10%;
+    margin: 0 10px;
+    line-height: 20px;
+    color: #FFF;
+    background: #000;
+    cursor: pointer;
+    text-align: center;
+}/*用于调整单选框的属性以及位置*/
+.label3{
+    position: absolute;
+    bottom: 10px;
+    left: 53%;
+    width: 2%;
+    height: 10%;
+    margin: 0 10px;
+    line-height: 20px;
+    color: #FFF;
+    background: #000;
+    cursor: pointer;
+    text-align: center;
+}/*用于调整单选框的属性以及位置*/
+#Input1:checked~ul{margin-left: 0;}/*第一张点击切换*/
+#Input1:checked~.label1{ background: #ff0101;}/*点击后改变单选框颜色*/
+#Input2:checked~ul{margin-left: -100%;}/*第二张点击切换*/
+#Input2:checked~.label2{ background: #ff0101;}/*点击后改变单选框颜色*/
+#Input3:checked~ul{margin-left: -200%;}/*第三张点击切换*/
+#Input3:checked~.label3{ background: #ff0101;}/*点击后改变单选框颜色*/
+
+.guanyuimg03{
+    width: 90%;
+}
+.guanyuimg04{
+    width: 90%;
+}
+.guanyuimg05{
+    width: 90%;
+}
+.guanyudiv04{
+    position: absolute;
+    top: 10%;
+    font-size: 40px;
+    color: black;
+    font-family: Arial;
+}
+.guanyuspan02{
+    position: absolute;
+    top: 25%;
+    left: 0%;
+}
+.guanyuspan03{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+.guanyuspan04{
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}
+.guanyudiv05{
+    position: absolute;
+    top: 10%;
+    font-size: 40px;
+    color: black;
+    font-family: Arial;
+}
+.guanyuspan06{
+    position: absolute;
+    top: 25%;
+    left: 0%;
+}
+.guanyuspan07{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+.guanyuspan08{
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}
+.guanyudiv06{
+    position: absolute;
+    top: 10%;
+    font-size: 40px;
+    color: black;
+    font-family: Arial;
+}
+.guanyuspan10{
+    position: absolute;
+    top: 25%;
+    left: 0%;
+}
+.guanyuspan11{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+.guanyuspan12{
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}

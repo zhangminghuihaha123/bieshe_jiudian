@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.kcDao">
+    <select id="returnfoodlist" resultType="com.zmh.demo.pojo.Foods">
+        select foodstyle,foodimg,foodmoney from bishe_foods;
+    </select>
+    <select id="returnNumB" resultType="int" parameterType="String">
+        SELECT COUNT(*) FROM bishe_foodkc WHERE food=#{food};
+    </select>
+    <insert id="infoodkc">
+        insert into bishe_foodkc (food, foodkc) VALUES (#{food},#{num});
+    </insert>
+    <update id="updatefoodkc">
+        update bishe_foodkc set foodkc=foodkc+${num} where food=#{food};
+    </update>
+    <select id="returnFoodKc" resultType="com.zmh.demo.pojo.FoodKc">
+        select food, foodkc from bishe_foodkc limit 0,15;
+    </select>
+    <select id="returngetkcstyle" parameterType="String" resultType="com.zmh.demo.pojo.FoodKc">
+        select food, foodkc from bishe_foodkc where food=#{food} limit 0,15;
+    </select>
+    <select id="returnKcCount" resultType="int">
+        select count(*) from bishe_foodkc;
+    </select>
+    <select id="getkctouchs" resultType="com.zmh.demo.pojo.FoodKc">
+        select food, foodkc from bishe_foodkc limit ${num},15;
+    </select>
+    <select id="getfoodstyles" resultType="String">
+        select food from bishe_foodkc where foodkc>0;
+    </select>
+    <select id="getFoodImage" resultType="String" parameterType="String">
+        select foodimg from bishe_foods where foodstyle=#{food};
+    </select>
+    <select id="getFoodmoney" resultType="int" parameterType="String">
+        select foodmoney from bishe_foods where foodstyle=#{food};
+    </select>
+    <update id="gettosellFood">
+        update bishe_foodkc set foodkc=foodkc-${num} where food=#{food};
+    </update>
+    <insert id="InMoneys" parameterType="com.zmh.demo.pojo.Money">
+        insert into bishe_money (money, lasttime, things, cost) VALUES (#{money},#{lasttime},#{things},#{cost});
+    </insert>
+    <select id="returnMoneySelf" resultType="int">
+        select money from bishe_money order by id desc limit 0,1;
+    </select>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.userinDao">
+    <select id="UserRoomTotal" parameterType="String" resultType="int">
+        select count(roomnum) from bishe_room where roomuser=#{user};
+    </select>
+    <select id="returnD" resultType="com.zmh.demo.pojo.ListD" parameterType="String">
+        SELECT a.roomnum,a.roomstyle,a.starttime,a.endtime,b.money,b.roomimg,(SELECT DATEDIFF(a.endtime,a.starttime))*b.money AS cost FROM bishe_room AS a LEFT JOIN bishe_rooms AS b ON(a.roomstyle=b.roomstyle) WHERE a.roomuser=#{user};
+    </select>
+    <update id="userDeleteOne">
+        update bishe_room set roomuser=null,starttime=null,endtime=null,yhk=null where roomnum=#{roomnum};
+    </update>
+    <select id="usergetyhk" resultType="String">
+        select yhk from bishe_room where roomnum=#{roomnum};
+    </select>
+    <select id="gettotal" parameterType="int" resultType="int">
+        SELECT ((DATEDIFF(a.endtime,a.starttime))*(SELECT money FROM bishe_rooms AS b WHERE a.roomstyle=b.roomstyle)) AS 'total' FROM bishe_room AS a WHERE roomnum=#{roomnum};
+    </select>
+    <update id="updatecard">
+        update bishe_card set money=money+#{money} where yhkzh=#{yhk};
+    </update>
+    <insert id="inusercall">
+        insert into bishe_usercall(user, room, usercalls) VALUES (#{name},#{room},#{call});
+    </insert>
+    <select id="getRoomStyle" resultType="String" parameterType="int">
+         select roomstyle from bishe_room where roomnum=#{roomnum};
+    </select>
+    <select id="getMoney1" resultType="int">
+        select money from bishe_money order by id desc limit 0,1;
+    </select>
+    <insert id="InMoney1" parameterType="com.zmh.demo.pojo.Money">
+        insert into bishe_money(money, lasttime, things, cost) VALUES (#{money},#{lasttime},#{things},#{cost});
+    </insert>
+</mapper>

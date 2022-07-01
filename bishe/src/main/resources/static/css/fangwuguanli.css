@@ -1,0 +1,286 @@
+body{
+    overflow-y: hidden;
+}
+#fwgldiv01{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+#fwgldiv02{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 10%;
+    background: black;
+}
+#fwgldiv03{
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    height: 10%;
+    width: 90%;
+    background: #f1f1f1;
+}
+#fwgldiv04{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 90%;
+    width: 90%;
+    background: #c1c1c1;
+}
+#fwgldiv05{
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    width: 98%;
+    height: 88%;
+    background: #f1eded;
+}
+#fwgldiv06{
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    height: 5%;
+    width: 10%;
+    background: #a7812c;
+    border-radius: 6px;
+}
+#fwgldiv07{
+    position: absolute;
+    top: 0%;
+    left: 82%;
+    width: 20%;
+    height: 100%;
+    border: 2px solid orange;
+}
+#fwgldiv08{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    background: #a7812c;
+}
+#fwglbox01{
+    position: absolute;
+    top: 13%;
+    left: 50%;
+}
+#fwglimg01{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 15%;
+    border-radius: 50%;
+}
+#fwgldiv09{
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+}
+#fwgldiv10{
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+}
+#fwgldiv11{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+}
+#fwgldiv13{
+    position: absolute;
+    top: 60%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+}
+#fwgldiv14{
+    position: absolute;
+    top: 70%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+}
+#fwgldiv20{
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+}
+#fwgldiv30{
+    position: absolute;
+    top: 90%;
+    left: 0%;
+    height: 7%;
+    width: 100%;
+}
+#fwglimg02{
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    height: 80%;
+    width: 5%;
+}
+#fwglimg03{
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    height: 80%;
+    width: 5%;
+}
+#fwglimg05{
+    position: absolute;
+    top: 0%;
+    left: 26%;
+    height: 70%;
+    width: 5%;
+}
+#fwglimg04{
+    position: absolute;
+    top: 20%;
+    left: 95%;
+    height: 60%;
+    width: 3%;
+}
+#fwglimg08{
+    position: absolute;
+    top: 0%;
+    left: 35%;
+    height: 70%;
+    width: 5%;
+}
+#fwglimg09{
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    height: 70%;
+    width: 5%;
+}
+.tc001{
+    position: absolute;
+    top: -550px;
+    left: 30%;
+    height: 50%;
+    width: 40%;
+    background: white;
+}
+.tca01{
+    position: absolute;
+    text-decoration:none;
+    top: 2%;
+    left: 95%;
+    width: 15px;
+    height: 15px;
+}
+.tcp01{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-size: 36px;
+}
+.tcp02{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 36px;
+}
+.tcp03{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 36px;
+}
+.tcs01{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+.tcb01{
+    position: absolute;
+    left: 40%;
+    top: 80%;
+    height: 10%;
+    width: 20%;
+}
+
+#rzinput01{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 15%;
+    height: 4%;
+}
+#rzinput02{
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    width: 15%;
+    height: 4%;
+}
+#rzinput03{
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 15%;
+    height: 4%;
+}
+#rzinput04{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 15%;
+    height: 4%;
+}
+
+#rzselect01{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    width: 15%;
+    height: 4%;
+}
+#rzselect02{
+    position: absolute;
+    top: 60%;
+    left: 48%;
+    width: 15%;
+    height: 4%;
+}
+#rzinput05{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    width: 15%;
+    height: 4%;
+}
+#rzinput06{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    width: 15%;
+    height: 4%;
+}
+#rzb01{
+    position: absolute;
+    top: 90%;
+    left: 46%;
+    width: 8%;
+    height: 8%;
+    background: green;
+    color: white;
+    border-radius: 15px;
+}

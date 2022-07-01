@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../static/js/JqueryAjax/JQuery.js" type="text/javascript"></script>
+    <link th:href="@{/static/css/goumaishangping.css}" rel="stylesheet">
+    <script th:src="@{/static/js/TestJs/goumaishangping.js}" type="text/javascript"></script>
+</head>
+<body>
+<div id="spdiv01">
+    <a href="/shouye" style="position: absolute;top: 30%;left: 95%;font-size: 15px">点击退出</a>
+    <span id="uiuser" th:text="'欢迎当前用户:'+${user}" style="position: absolute;top: 30%;left: 82%;font-size: 15px"></span>
+</div>
+<div id="spdiv02" th:name="${size}">
+     <div th:each="fsl:${fodl}" class="spdivs">
+         <img class="spimgs" th:src="@{${fsl.getFoodimg()}}">
+         <span class="spspans01" th:text="'商品名：'+${fsl.getFoodstyle()}"></span>
+         <span class="spspans02" th:text="'单价:￥'+${fsl.getFoodmoney()+'元'}"></span>
+         <span class="spspans03">购买数量:</span>
+             <select class="spselects">
+                 <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                 <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+             </select>
+         <button class="spbs" onclick="spgm01(this)">确认购买</button>
+     </div>
+</div>
+<p style="position: absolute;top: 8%;left: 48%;font-size: 24px">商品清单</p>
+</body>
+</html>

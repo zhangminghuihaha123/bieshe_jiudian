@@ -1,0 +1,294 @@
+body{
+    overflow-y: hidden;
+}
+#kcdiv01{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: #f5f5f5;
+}
+#kcdiv02{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 10%;
+    background: #c1c1c1;
+}
+#kcspan01{
+    position: absolute;
+    top: 30%;
+    left: 97%;
+    font-size: 32px;
+}
+
+#kcimg01{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 60%;
+    width: 80%;
+}
+
+#kcdiv03{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    height: 60%;
+    width: 4%;
+}
+
+#kcspan02{
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    font-size: 12px;
+}
+
+
+#kcimg02{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 60%;
+    width: 80%;
+}
+
+#kcdiv04{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    height: 60%;
+    width: 4%;
+}
+
+#kcspan03{
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    font-size: 12px;
+}
+
+
+#kcimg03{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 60%;
+    width: 80%;
+}
+
+#kcdiv05{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    height: 60%;
+    width: 4%;
+}
+
+#kcspan04{
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    font-size: 12px;
+}
+
+#kcdiv06{
+    position: absolute;
+    top: 15%;
+    width: 80%;
+    left: 10%;
+    height: 70%;
+    background: white;
+    border-radius: 25px;
+    overflow-y: auto;
+}
+
+#kcdiv08{
+    position: absolute;
+    top: 15%;
+    width: 80%;
+    left: 10%;
+    height: 70%;
+    background: white;
+    border-radius: 25px;
+}
+
+#kcdiv09{
+    position: absolute;
+    top: 15%;
+    width: 80%;
+    left: 10%;
+    height: 70%;
+    background: white;
+    border-radius: 25px;
+}
+
+#kcdiv07{
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    width: 2%;
+    height: 10%;
+    background: #a7812c;
+    color: white;
+    font-size: 30px;
+    white-space: normal;
+    word-break: break-all;
+    border-radius: 10px;
+}
+
+.kcdivs{
+    position: relative;
+    margin-top: 50px;
+    left: 10%;
+    width: 80%;
+    height: 30%;
+    margin-bottom: 20px;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.kcimgs{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    width: 10%;
+    height: 80%;
+}
+
+.kcps01{
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    font-size: 24px;
+}
+
+.kcps02{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    font-size: 24px;
+}
+
+.kcps03{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    font-size: 24px;
+}
+
+.kcinputs{
+    position: absolute;
+    top: 58%;
+    height: 20%;
+    width: 15%;
+    left: 36%;
+}
+
+.kcbuttons{
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    width: 8%;
+    height: 20%;
+    background: red;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+
+#kcb02{
+     position: absolute;
+     top: 5%;
+     left: 85%;
+     width: 10%;
+     height: 5%;
+     background: yellowgreen;
+     border-radius: 15px;
+ }
+
+table {
+
+    width: 90%;
+
+    background: #ccc;
+
+    margin: 10px auto;
+
+    border-collapse: collapse;
+
+    /*border-collapse:collapse合并内外边距
+
+    (去除表格单元格默认的2个像素内外边距*/
+
+}
+
+th,td {
+
+    height: 25px;
+
+    line-height: 25px;
+
+    text-align: center;
+
+    border: 1px solid #ccc;
+
+}
+
+th {
+
+    background: #eee;
+
+    font-weight: normal;
+
+}
+
+tr {
+
+    background: #fff;
+
+}
+
+tr:hover {
+
+    background: #cc0;
+
+}
+
+
+#kcselect{
+    position: absolute;
+    top: 9%;
+    left: 45%;
+    height: 5%;
+    width: 10%;
+}
+
+#kcimg04{
+    position: absolute;
+    top: 20%;
+    width: 100px;
+    height: 100px;
+    left: 45%;
+}
+
+#kcinput01{
+    position: absolute;
+    top: 58%;
+    left: 48%;
+    width: 10%;
+    height: 5%;
+}
+
+#kcb03{
+    position: absolute;
+    left: 45%;
+    width: 10%;
+    height: 7%;
+    top: 80%;
+    background: red;
+    color: whitesmoke;
+    border-radius: 15px;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.shouyeDao">
+    <update id="inuserimages" parameterType="String">
+        update bishe_user set userimg=#{userimg} where name=#{name};
+    </update>
+    <select id="getUserImage" parameterType="String" resultType="String">
+        select userimg from bishe_user where name=#{name};
+    </select>
+    <select id="returnSalf" resultType="com.zmh.demo.pojo.ListRoomSalf">
+        SELECT a.id,a.roomimg,a.roomstyle,a.money,(select COUNT(roomnum)) AS 'roomtotal' FROM bishe_rooms AS a LEFT JOIN bishe_room AS b USING(roomstyle) WHERE b.roomuser IS null GROUP BY roomstyle HAVING (select COUNT(roomnum) !=0);
+    </select>
+    <select id="getRoomStyle" resultType="int">
+        select roomstyle from bishe_rooms;
+    </select>
+    <select id="returnfriends" resultType="com.zmh.demo.pojo.Friends">
+        select * from bishe_friends;
+    </select>
+    <select id="returnRoomSalf" resultType="com.zmh.demo.pojo.ListRoomSalf" parameterType="String">
+        SELECT a.id,a.roomimg,a.roomstyle,a.money,(select COUNT(roomnum)) AS 'roomtotal' FROM bishe_rooms AS a LEFT JOIN bishe_room AS b USING(roomstyle) WHERE roomstyle=#{roomstyle}  GROUP BY roomstyle HAVING (select COUNT(roomnum) !=0);
+    </select>
+    <select id="returnzh" resultType="String">
+        select yhkzh from bishe_card;
+    </select>
+    <select id="retrunmm" parameterType="String" resultType="String">
+        select yhkmm from bishe_card where yhkzh=#{yhk};
+    </select>
+    <select id="yhktotal" resultType="int" parameterType="String">
+        select money from bishe_card where yhkzh=#{yhk};
+    </select>
+    <select id="roomsale" parameterType="String" resultType="int">
+        select money from bishe_rooms where roomstyle=#{roomstyle};
+    </select>
+    <select id="returnRoomNum" parameterType="String" resultType="int">
+        SELECT roomnum FROM bishe_room WHERE roomstyle=#{roomstyle} AND roomuser IS NULL OR roomuser='' LIMIT 0,1;
+    </select>
+    <update id="updateRooms">
+        update bishe_room set roomuser=#{user} , starttime=#{start}, endtime=date_sub(#{end}, INTERVAL -12 hour) ,yhk=#{yhk} where roomnum=#{roomnum};
+    </update>
+    <update id="updateMoney">
+        update bishe_card set money=money-${cost} where yhkzh=#{yhk};
+    </update>
+    <insert id="logUser">
+        insert into bishe_user_log(username, roomnum, cost, starttime, endtime) VALUES (#{username},#{roomnum},#{cost},#{starttime},date_sub(#{endtime}, INTERVAL -12 hour));
+    </insert>
+    <select id="returnMoney1" resultType="int">
+        select money from bishe_money order by id desc limit 0,1;
+    </select>
+    <insert id="inMoney1" parameterType="com.zmh.demo.pojo.Money">
+        insert into bishe_money(money, lasttime, things, cost) VALUES (#{money},#{lasttime},#{things},#{cost});
+    </insert>
+    <select id="getListEs" resultType="com.zmh.demo.pojo.ListE" parameterType="String">
+        SELECT a.name,a.userimg,b.roomstyle,c.usermessages FROM bishe_usermessage AS c LEFT JOIN bishe_room AS b ON (c.roomstyle=b.roomstyle) LEFT JOIN bishe_user AS a ON(a.name=c.user) WHERE b.roomstyle=#{roomstyle} GROUP BY a.name;
+    </select>
+</mapper>

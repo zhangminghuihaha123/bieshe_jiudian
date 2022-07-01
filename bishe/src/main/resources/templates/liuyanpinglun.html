@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../static/js/JqueryAjax/JQuery.js" type="text/javascript"></script>
+    <link th:href="@{/static/css/liuyanpinglun.css}" rel="stylesheet">
+    <script th:src="@{/static/js/TestJs/liuyanpinglun.js}" type="text/javascript"></script>
+</head>
+<body>
+<div id="lydiv02">
+    <a href="/shouye" style="position: absolute;top: 30%;left: 95%;font-size: 15px">点击退出</a>
+    <span id="lyuser" th:text="'欢迎当前用户:'+${user}" style="position: absolute;top: 30%;left: 82%;font-size: 15px"></span>
+</div>
+   <div id="lydiv01">
+       <p style="text-align: center;">--------------------------------------------------------------------------</p>
+       <p style="text-align: center;font-size: 36px">评论</p>
+     <div th:each="mu:${room}" class="lydivs">
+          <p th:text="${mu.getRoomstyle()}" class="lyps01"></p>
+         <p th:text="${mu.getRoomnum()}" class="lyps02"></p>
+         <p class="lyps03">评论:</p>
+         <textarea class="lytext" type="text" style="position: absolute;top: 12%;left: 30%;width: 40%;height: 80%"></textarea>
+         <button class="lybs" onclick="tocent(this)">发布</button>
+     </div>
+       <p style="text-align: center;">--------------------------------------------------------------------------</p>
+   </div>
+</body>
+</html>

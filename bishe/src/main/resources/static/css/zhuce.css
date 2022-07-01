@@ -1,0 +1,152 @@
+.zhucediv01{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.zhuceimg01{
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.zhucediv02{
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    width: 70%;
+    height: 80%;
+    background: whitesmoke;
+    border-radius: 15px;
+}
+.zhucep1{
+    position: absolute;
+    left: 5%;
+    top: 3%;
+    font-size: 30px;
+    color: yellowgreen;
+}
+.zhucep2{
+    position: absolute;
+    left: 5%;
+    top: 8%;
+    font-size: 30px;
+    color: gray;
+}
+.zhucea01{
+    position: absolute;
+    left: 85%;
+    top: 3%;
+    font-size: 18px;
+    color: orange;
+}
+.zhucediv04{
+    position: absolute;
+    left: 30%;
+    height: 10%;
+    width: 50%;
+    top: 10%;
+    font-size: 24px;
+    color: black;
+}
+.zhuceinput01{
+    position: absolute;
+    width: 60%;
+    height: 50%;
+}
+.zhucediv05{
+    position: absolute;
+    left: 30%;
+    height: 10%;
+    width: 80%;
+    top: 20%;
+    font-size: 24px;
+    color: black;
+}
+.zhuceinput02{
+    position: absolute;
+    width: 60%;
+    height: 50%;
+}
+.zhucediv06{
+    position: absolute;
+    left: 30%;
+    height: 10%;
+    width: 50%;
+    top: 30%;
+    font-size: 24px;
+    color: black;
+}
+.zhuceinput03{
+    position: absolute;
+    width: 60%;
+    height: 50%;
+}
+.zhucediv07{
+    position: absolute;
+    left: 30%;
+    height: 10%;
+    width: 50%;
+    top: 40%;
+    font-size: 24px;
+    color: black;
+}
+.zhuceinput04{
+    position: absolute;
+    width: 60%;
+    height: 50%;
+}
+.zhucediv08{
+    position: absolute;
+    left: 30%;
+    height: 10%;
+    width: 50%;
+    top: 50%;
+    font-size: 24px;
+    color: black;
+}
+.zhucediv09{
+    position: absolute;
+    left: 30%;
+    height: 10%;
+    width: 50%;
+    top: 60%;
+    font-size: 24px;
+    color: black;
+}
+.zhuceinput05{
+    position: absolute;
+    width: 30%;
+    height: 50%;
+}
+.zhucea02{
+    position: absolute;
+    left: 50%;
+    font-size: 18px;
+}
+.zhucediv10{
+    position: absolute;
+    left: 70%;
+    top:50%;
+    background: bisque;
+    width: 20%;
+    height: 20%;
+    border-radius: 10px;
+}
+.zhucep3{
+    font-size: 60px;
+    text-align: center;
+}
+.zhucediv11{
+    position: absolute;
+    left: 40%;
+    top: 75%;
+    width: 15%;
+    height: 8%;
+}
+.zhucebutton01{
+    font-size: 36px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: #787806;
+}

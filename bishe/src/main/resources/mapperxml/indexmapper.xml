@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.indexDao">
+       <select id="index_panduan_password" resultType="String" parameterType="String">
+           select password from bishe.bishe_user where name=#{name};
+       </select>
+
+     <select id="returnLonsmm" parameterType="Long" resultType="int">
+         SELECT COUNT(*) FROM bishe_user WHERE phonenumber=#{phone};
+     </select>
+
+    <update id="intoupdatename">
+        update bishe_user set name=#{name},password=#{password} where phonenumber=#{phone};
+    </update>
+</mapper>

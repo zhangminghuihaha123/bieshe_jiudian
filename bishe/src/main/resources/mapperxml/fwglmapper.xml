@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.fwglDao">
+    <insert id="inroom" parameterType="com.zmh.demo.pojo.Room">
+        insert into bishe_room(roomnum, roomstyle) VALUES (#{roomnum},#{roomstyle});
+    </insert>
+    <select id="selectroomone" resultType="String">
+        select roomstyle from bishe_room where id=1;
+    </select>
+    <update id="truncateroom">
+        truncate table bishe_room;
+    </update>
+    <select id="returnlistRoom" parameterType="int" resultType="String">
+        select roomstyle from bishe_room where roomnum=#{roomnum};
+    </select>
+    <select id="returnRoomStyle" resultType="String">
+        select roomstyle from bishe_room;
+    </select>
+    <update id="tcxg">
+        update bishe_room set roomstyle=#{roomstyle} where roomnum=#{roomnum};
+    </update>
+    <select id="returnA" resultType="com.zmh.demo.pojo.ListA">
+        select roomnum,roomuser from bishe_room where roomuser is not null and roomuser != '' AND NOW() > starttime;
+    </select>
+    <select id="returnB" resultType="com.zmh.demo.pojo.ListB">
+        SELECT a.roomnum,a.roomuser,a.starttime,a.endtime,c.age,c.phonenumber FROM bishe_room AS a left join bishe_user AS c on(a.roomuser=c.name) WHERE a.roomuser =#{roomuser} AND a.roomnum=#{roomnum};
+    </select>
+    <select id="returnRoom" resultType="com.zmh.demo.pojo.Room">
+        SELECT * from bishe_room where roomuser is not null and roomuser != '';
+    </select>
+    <update id="qclj">
+        UPDATE bishe_room SET roomuser = NULL,starttime = NULL,endtime = NULL,yhk=null WHERE NOW() > endtime;
+    </update>
+    <select id="toqqcroom" resultType="com.zmh.demo.pojo.Room" parameterType="int">
+        select * from bishe_room where roomnum=#{roomnum};
+    </select>
+    <update id="toqqcclearroom" parameterType="int">
+        UPDATE bishe_room SET roomuser = NULL,starttime = NULL,endtime = NULL,yhk=null WHERE roomnum=#{roomnum};
+    </update>
+    <select id="returnRoomsHave" resultType="String">
+        SELECT roomstyle FROM bishe_room where roomuser IS null GROUP BY roomstyle;
+    </select>
+    <select id="returnRoomHave" parameterType="String" resultType="Integer">
+        select roomnum from bishe_room where roomstyle=#{room} and roomuser is null;
+    </select>
+    <insert id="inzhuce">
+        insert into bishe_user(name, sex, age, phonenumber) VALUES (#{name},#{sex},#{number},#{phone});
+    </insert>
+    <update id="inruzhu">
+        update bishe_room set roomuser=#{user},starttime=#{start},endtime=date_sub(#{end}, INTERVAL -12 hour),roomstyle=#{roomstyle} where roomnum=#{roomnum};
+    </update>
+</mapper>

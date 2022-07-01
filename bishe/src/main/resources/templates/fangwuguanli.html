@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script th:src="@{/static/js/JqueryAjax/JQuery.js}" type="text/javascript"></script>
+    <link th:href="@{/static/css/fangwuguanli.css}" rel="stylesheet">
+    <link th:href="@{/static/css/fangwuguanli02.css}" rel="stylesheet">
+    <script th:src="@{/static/js/TestJs/fangwuguanli.js}" type="text/javascript"></script>
+    <script th:src="@{/static/js/TestJs/fangwuguanli02.js}" type="text/javascript"></script>
+    <script th:src="@{/static/js/TestJs/fangwuguanli03.js}" type="text/javascript"></script>
+</head>
+<body>
+<div id="fwgldiv01">
+    <div id="fwgldiv02">
+       <img th:src="@{/static/img/fangwuguanli/a.png}" id="fwglimg01">
+        <div id="fwgldiv09" onmouseover="fwgl01()" onmouseout="fwgl02()" onclick="fwgl07()">
+            <p style="text-align: center;color: white">回到首页</p>
+        </div>
+        <div id="fwgldiv10" onmouseover="fwgl03()" onmouseout="fwgl04()" onclick="fwgl08()">
+            <p style="text-align: center;color: white">返回上一级</p>
+        </div>
+        <div id="fwgldiv11" onmouseover="fwgl05()" onmouseout="fwgl06()" onclick="fwgl14()">
+            <p style="text-align: center;color: white">房间配置</p>
+        </div>
+        <div id="fwgldiv13" onmouseover="fwgl09()" onmouseout="fwgl10()" onclick="fwgl13()">
+            <p style="text-align: center;color: white">房态</p>
+        </div>
+        <div id="fwgldiv14" onmouseover="fwgl11()" onmouseout="fwgl12()" onclick="fwgl17()">
+            <p style="text-align: center;color: white">房型修改</p>
+        </div>
+        <div id="fwgldiv20" onmouseover="fwgl20()" onmouseout="fwgl21()" onclick="fwgl22()">
+            <p style="text-align: center;color: white">退房</p>
+        </div>
+        <div id="fwgldiv30" onmouseover="fwgl23()" onmouseout="fwgl24()" onclick="fwgl25()">
+            <p style="text-align: center;color: white">入住/续费</p>
+        </div>
+    </div>
+    <div id="fwgldiv03">
+        <img th:src="@{/static/img/fangwuguanli/b.png}" id="fwglimg02" onclick="fwgl13()">
+        <span style="position: absolute;top: 75%;left: 6.7%;">房态</span>
+        <img th:src="@{/static/img/fangwuguanli/c.png}" id="fwglimg03" onclick="fwgl14()">
+        <span style="position: absolute;top: 75%;left: 16%;">房间配置</span>
+        <img th:src="@{/static/img/fangwuguanli/e.png}" id="fwglimg05" onclick="fwgl17()">
+        <span style="position: absolute;top: 75%;left: 26%;">房型修改</span>
+        <img th:src="@{/static/img/fangwuguanli/d.png}" id="fwglimg04" onclick="fwgl08()">
+        <span style="position: absolute;top: 75%;left: 36.2%;">退房</span>
+        <img th:src="@{/static/img/fangwuguanli/g.png}" id="fwglimg08" onclick="fwgl22()">
+        <span style="position: absolute;top: 75%;left: 45.5%;">入住/续费</span>
+        <img th:src="@{/static/img/fangwuguanli/h.png}" id="fwglimg09" onclick="fwgl25()">
+    </div>
+    <div id="fwgldiv04">
+      <div id="fwgldiv05">
+          <div id="ftydiv01">
+              <div id="fwgldiv07">
+                  <div id="fwgldiv08">
+                      <p style="text-align: center;">营业情况/房间状态</p>
+                  </div>
+                  <p style="position: absolute;left: 0%;top: 10%;font-size: 24px">房间类型:</p>
+                  <select id="fwglbox01">
+                      <option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option>
+                  </select>
+                  <span style="position: absolute;left: 0%;top: 23%;font-size: 24px">房间类型数量:</span>
+                  <p th:text="${fxsl}" style="position: absolute;left: 60%;top: 20%;font-size: 24px"></p>
+                  <p style="position: absolute;left: 0%;top: 30%;font-size: 24px">房间数量:  40</p>
+                  <span style="position: absolute;left: 0%;top: 45%;font-size: 24px">住房数量:</span>
+                  <span id="fwp01" style="position: absolute;left: 35%;top: 45%;font-size: 24px"></span>
+                  <span id="fwp02" style="position: absolute;left: 0%;top: 57%;font-size: 24px"></span>
+              </div>
+              <div id="fwgldiv12">
+                  <div id="fwpdiv01"><p style="text-align: center">01层</p></div>
+                  <div id="fwpdiv02"><p style="text-align: center">02层</p></div>
+                  <div id="fwpdiv03"><p style="text-align: center">03层</p></div>
+                  <div id="fwpdiv04"><p style="text-align: center">04层</p></div>
+                  <div id="ftdiv01" onclick="ym(this)"><img id="fwimg01" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan01" class="fwglspan"></span><span th:text="${fjxx.get(0)}" class="i"></span></div><div id="ftdiv02" onclick="ym(this)"><img id="fwimg02" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan02" class="fwglspan"></span><span th:text="${fjxx.get(1)}" class="i"></span></div><div id="ftdiv03" onclick="ym(this)"><img id="fwimg03" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan03" class="fwglspan"></span><span th:text="${fjxx.get(2)}" class="i"></span></div><div id="ftdiv04" onclick="ym(this)"><img id="fwimg04" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan04" class="fwglspan"></span><span th:text="${fjxx.get(3)}" class="i"></span></div><div id="ftdiv05" onclick="ym(this)"><img id="fwimg05" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan05" class="fwglspan"></span><span th:text="${fjxx.get(4)}" class="i"></span></div>
+                  <div id="ftdiv06" onclick="ym(this)"><img id="fwimg06" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan06" class="fwglspan"></span><span th:text="${fjxx.get(5)}" class="i"></span></div><div id="ftdiv07" onclick="ym(this)"><img id="fwimg07" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan07" class="fwglspan"></span><span th:text="${fjxx.get(6)}" class="i"></span></div><div id="ftdiv08" onclick="ym(this)"><img id="fwimg08" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan08" class="fwglspan"></span><span th:text="${fjxx.get(7)}" class="i"></span></div><div id="ftdiv09" onclick="ym(this)"><img id="fwimg09" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan09" class="fwglspan"></span><span th:text="${fjxx.get(8)}" class="i"></span></div><div id="ftdiv10" onclick="ym(this)"><img id="fwimg10" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan10" class="fwglspan"></span><span th:text="${fjxx.get(9)}" class="i"></span></div>
+                  <div id="ftdiv11" onclick="ym(this)"><img id="fwimg11" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan11" class="fwglspan"></span><span th:text="${fjxx.get(10)}" class="i"></span></div><div id="ftdiv12" onclick="ym(this)"><img id="fwimg12" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan12" class="fwglspan"></span><span th:text="${fjxx.get(11)}" class="i"></span></div><div id="ftdiv13" onclick="ym(this)"><img id="fwimg13" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan13" class="fwglspan"></span><span th:text="${fjxx.get(12)}" class="i"></span></div><div id="ftdiv14" onclick="ym(this)"><img id="fwimg14" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan14" class="fwglspan"></span><span th:text="${fjxx.get(13)}" class="i"></span></div><div id="ftdiv15" onclick="ym(this)"><img id="fwimg15" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan15" class="fwglspan"></span><span th:text="${fjxx.get(14)}" class="i"></span></div>
+                  <div id="ftdiv16" onclick="ym(this)"><img id="fwimg16" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan16" class="fwglspan"></span><span th:text="${fjxx.get(15)}" class="i"></span></div><div id="ftdiv17" onclick="ym(this)"><img id="fwimg17" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan17" class="fwglspan"></span><span th:text="${fjxx.get(16)}" class="i"></span></div><div id="ftdiv18" onclick="ym(this)"><img id="fwimg18" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan18" class="fwglspan"></span><span th:text="${fjxx.get(17)}" class="i"></span></div><div id="ftdiv19" onclick="ym(this)"><img id="fwimg19" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan19" class="fwglspan"></span><span th:text="${fjxx.get(18)}" class="i"></span></div><div id="ftdiv20" onclick="ym(this)"><img id="fwimg20" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan20" class="fwglspan"></span><span th:text="${fjxx.get(19)}" class="i"></span></div>
+                  <div id="ftdiv21" onclick="ym(this)"><img id="fwimg21" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan21" class="fwglspan"></span><span th:text="${fjxx.get(20)}" class="i"></span></div><div id="ftdiv22" onclick="ym(this)"><img id="fwimg22" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan22" class="fwglspan"></span><span th:text="${fjxx.get(21)}" class="i"></span></div><div id="ftdiv23" onclick="ym(this)"><img id="fwimg23" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan23" class="fwglspan"></span><span th:text="${fjxx.get(22)}" class="i"></span></div><div id="ftdiv24" onclick="ym(this)"><img id="fwimg24" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan24" class="fwglspan"></span><span th:text="${fjxx.get(23)}" class="i"></span></div><div id="ftdiv25" onclick="ym(this)"><img id="fwimg25" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan25" class="fwglspan"></span><span th:text="${fjxx.get(24)}" class="i"></span></div>
+                  <div id="ftdiv26" onclick="ym(this)"><img id="fwimg26" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan26" class="fwglspan"></span><span th:text="${fjxx.get(25)}" class="i"></span></div><div id="ftdiv27" onclick="ym(this)"><img id="fwimg27" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan27" class="fwglspan"></span><span th:text="${fjxx.get(26)}" class="i"></span></div><div id="ftdiv28" onclick="ym(this)"><img id="fwimg28" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan28" class="fwglspan"></span><span th:text="${fjxx.get(27)}" class="i"></span></div><div id="ftdiv29" onclick="ym(this)"><img id="fwimg29" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan29" class="fwglspan"></span><span th:text="${fjxx.get(28)}" class="i"></span></div><div id="ftdiv30" onclick="ym(this)"><img id="fwimg30" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan30" class="fwglspan"></span><span th:text="${fjxx.get(29)}" class="i"></span></div>
+                  <div id="ftdiv31" onclick="ym(this)"><img id="fwimg31" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan31" class="fwglspan"></span><span th:text="${fjxx.get(30)}" class="i"></span></div><div id="ftdiv32" onclick="ym(this)"><img id="fwimg32" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan32" class="fwglspan"></span><span th:text="${fjxx.get(31)}" class="i"></span></div><div id="ftdiv33" onclick="ym(this)"><img id="fwimg33" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan33" class="fwglspan"></span><span th:text="${fjxx.get(32)}" class="i"></span></div><div id="ftdiv34" onclick="ym(this)"><img id="fwimg34" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan34" class="fwglspan"></span><span th:text="${fjxx.get(33)}" class="i"></span></div><div id="ftdiv35" onclick="ym(this)"><img id="fwimg35" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan35" class="fwglspan"></span><span th:text="${fjxx.get(34)}" class="i"></span></div>
+                  <div id="ftdiv36" onclick="ym(this)"><img id="fwimg36" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan36" class="fwglspan"></span><span th:text="${fjxx.get(35)}" class="i"></span></div><div id="ftdiv37" onclick="ym(this)"><img id="fwimg37" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan37" class="fwglspan"></span><span th:text="${fjxx.get(36)}" class="i"></span></div><div id="ftdiv38" onclick="ym(this)"><img id="fwimg38" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan38" class="fwglspan"></span><span th:text="${fjxx.get(37)}" class="i"></span></div><div id="ftdiv39" onclick="ym(this)"><img id="fwimg39" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan39" class="fwglspan"></span><span th:text="${fjxx.get(38)}" class="i"></span></div><div id="ftdiv40" onclick="ym(this)"><img id="fwimg40" th:src="@{/static/img/fangwuguanli/f.png}" style="display: none" class="fwimg"><span id="fwglspan40" class="fwglspan"></span><span th:text="${fjxx.get(39)}" class="i"></span></div>
+              </div>
+          </div>
+          <div id="fjpzdiv01" style="display: none">
+              <table border="1" id="table01">
+                  <tr>
+                      <th>房间号</th>
+                      <th>房间类型</th>
+                      <th>房间号</th>
+                      <th>房间类型</th>
+                      <th>房间号</th>
+                      <th>房间类型</th>
+                      <th>房间号</th>
+                      <th>房间类型</th>
+                  </tr>
+                  <tr>
+                      <td>101</td><td><select id="fwselect01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>201</td><td><select id="fwselect11"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>301</td><td><select id="fwselect21"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>401</td><td><select id="fwselect31"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>102</td><td><select id="fwselect02"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>202</td><td><select id="fwselect12"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>302</td><td><select id="fwselect22"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>402</td><td><select id="fwselect32"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>103</td><td><select id="fwselect03"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>203</td><td><select id="fwselect13"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>303</td><td><select id="fwselect23"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>403</td><td><select id="fwselect33"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>104</td><td><select id="fwselect04"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>204</td><td><select id="fwselect14"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>304</td><td><select id="fwselect24"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>404</td><td><select id="fwselect34"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>105</td><td><select id="fwselect05"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>205</td><td><select id="fwselect15"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>305</td><td><select id="fwselect25"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>405</td><td><select id="fwselect35"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>106</td><td><select id="fwselect06"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>206</td><td><select id="fwselect16"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>306</td><td><select id="fwselect26"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>406</td><td><select id="fwselect36"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>107</td><td><select id="fwselect07"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>207</td><td><select id="fwselect17"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>307</td><td><select id="fwselect27"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>407</td><td><select id="fwselect37"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>108</td><td><select id="fwselect08"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>208</td><td><select id="fwselect18"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>308</td><td><select id="fwselect28"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>408</td><td><select id="fwselect38"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>109</td><td><select id="fwselect09"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>209</td><td><select id="fwselect19"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>309</td><td><select id="fwselect29"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>409</td><td><select id="fwselect39"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+                  <tr>
+                      <td>110</td><td><select id="fwselect10"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>210</td><td><select id="fwselect20"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>310</td><td><select id="fwselect30"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td><td>410</td><td><select id="fwselect40"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select></td>
+                  </tr>
+              </table>
+              <button id="fwglbutton01" onclick="fwgl15()">确认提交</button>
+              <button id="fwglbutton02" onclick="fwgl16()">清空数据</button>
+          </div>
+          <div id="fxxgdiv01" style="display: none">
+              <table border="1" id="table02">
+                  <th>房间号</th><th>当前房间类型</th><th>修改类型</th>
+                  <th>房间号</th><th>当前房间类型</th><th>修改类型</th>
+                  <th>房间号</th><th>当前房间类型</th><th>修改类型</th>
+                  <th>房间号</th><th>当前房间类型</th><th>修改类型</th>
+                  <tr><td>101</td><td th:text="${fj01.get(0)}"></td><td><button id="fjbutton01" class="j" onclick="fjb01()">点此修改</button></td><td>201</td><td th:text="${fj01.get(10)}"></td><td><button id="fjbutton11" class="j" onclick="fjb11()">点此修改</button></td><td>301</td><td th:text="${fj01.get(20)}"></td><td><button id="fjbutton21" class="j" onclick="fjb21()">点此修改</button></td><td>401</td><td th:text="${fj01.get(30)}"></td><td><button id="fjbutton31" class="j" onclick="fjb31()">点此修改</button></td></tr>
+                  <tr><td>102</td><td th:text="${fj01.get(1)}"></td><td><button id="fjbutton02" class="j" onclick="fjb02()">点此修改</button></td><td>202</td><td th:text="${fj01.get(11)}"></td><td><button id="fjbutton12" class="j" onclick="fjb12()">点此修改</button></td><td>302</td><td th:text="${fj01.get(21)}"></td><td><button id="fjbutton22" class="j" onclick="fjb22()">点此修改</button></td><td>402</td><td th:text="${fj01.get(31)}"></td><td><button id="fjbutton32" class="j" onclick="fjb32()">点此修改</button></td></tr>
+                  <tr><td>103</td><td th:text="${fj01.get(2)}"></td><td><button id="fjbutton03" class="j" onclick="fjb03()">点此修改</button></td><td>203</td><td th:text="${fj01.get(12)}"></td><td><button id="fjbutton13" class="j" onclick="fjb13()">点此修改</button></td><td>303</td><td th:text="${fj01.get(22)}"></td><td><button id="fjbutton23" class="j" onclick="fjb23()">点此修改</button></td><td>403</td><td th:text="${fj01.get(32)}"></td><td><button id="fjbutton33" class="j" onclick="fjb33()">点此修改</button></td></tr>
+                  <tr><td>104</td><td th:text="${fj01.get(3)}"></td><td><button id="fjbutton04" class="j" onclick="fjb04()">点此修改</button></td><td>204</td><td th:text="${fj01.get(13)}"></td><td><button id="fjbutton14" class="j" onclick="fjb14()">点此修改</button></td><td>304</td><td th:text="${fj01.get(23)}"></td><td><button id="fjbutton24" class="j" onclick="fjb24()">点此修改</button></td><td>404</td><td th:text="${fj01.get(33)}"></td><td><button id="fjbutton34" class="j" onclick="fjb34()">点此修改</button></td></tr>
+                  <tr><td>105</td><td th:text="${fj01.get(4)}"></td><td><button id="fjbutton05" class="j" onclick="fjb05()">点此修改</button></td><td>205</td><td th:text="${fj01.get(14)}"></td><td><button id="fjbutton15" class="j" onclick="fjb15()">点此修改</button></td><td>305</td><td th:text="${fj01.get(24)}"></td><td><button id="fjbutton25" class="j" onclick="fjb25()">点此修改</button></td><td>405</td><td th:text="${fj01.get(34)}"></td><td><button id="fjbutton35" class="j" onclick="fjb35()">点此修改</button></td></tr>
+                  <tr><td>106</td><td th:text="${fj01.get(5)}"></td><td><button id="fjbutton06" class="j" onclick="fjb06()">点此修改</button></td><td>206</td><td th:text="${fj01.get(15)}"></td><td><button id="fjbutton16" class="j" onclick="fjb16()">点此修改</button></td><td>306</td><td th:text="${fj01.get(25)}"></td><td><button id="fjbutton26" class="j" onclick="fjb26()">点此修改</button></td><td>406</td><td th:text="${fj01.get(35)}"></td><td><button id="fjbutton36" class="j" onclick="fjb36()">点此修改</button></td></tr>
+                  <tr><td>107</td><td th:text="${fj01.get(6)}"></td><td><button id="fjbutton07" class="j" onclick="fjb07()">点此修改</button></td><td>207</td><td th:text="${fj01.get(16)}"></td><td><button id="fjbutton17" class="j" onclick="fjb17()">点此修改</button></td><td>307</td><td th:text="${fj01.get(26)}"></td><td><button id="fjbutton27" class="j" onclick="fjb27()">点此修改</button></td><td>407</td><td th:text="${fj01.get(36)}"></td><td><button id="fjbutton37" class="j" onclick="fjb37()">点此修改</button></td></tr>
+                  <tr><td>108</td><td th:text="${fj01.get(7)}"></td><td><button id="fjbutton08" class="j" onclick="fjb08()">点此修改</button></td><td>208</td><td th:text="${fj01.get(17)}"></td><td><button id="fjbutton18" class="j" onclick="fjb18()">点此修改</button></td><td>308</td><td th:text="${fj01.get(27)}"></td><td><button id="fjbutton28" class="j" onclick="fjb28()">点此修改</button></td><td>408</td><td th:text="${fj01.get(37)}"></td><td><button id="fjbutton38" class="j" onclick="fjb38()">点此修改</button></td></tr>
+                  <tr><td>109</td><td th:text="${fj01.get(8)}"></td><td><button id="fjbutton09" class="j" onclick="fjb09()">点此修改</button></td><td>209</td><td th:text="${fj01.get(18)}"></td><td><button id="fjbutton19" class="j" onclick="fjb19()">点此修改</button></td><td>309</td><td th:text="${fj01.get(28)}"></td><td><button id="fjbutton29" class="j" onclick="fjb29()">点此修改</button></td><td>409</td><td th:text="${fj01.get(38)}"></td><td><button id="fjbutton39" class="j" onclick="fjb39()">点此修改</button></td></tr>
+                  <tr><td>110</td><td th:text="${fj01.get(9)}"></td><td><button id="fjbutton10" class="j" onclick="fjb10()">点此修改</button></td><td>210</td><td th:text="${fj01.get(19)}"></td><td><button id="fjbutton20" class="j" onclick="fjb20()">点此修改</button></td><td>310</td><td th:text="${fj01.get(29)}"></td><td><button id="fjbutton30" class="j" onclick="fjb30()">点此修改</button></td><td>410</td><td th:text="${fj01.get(39)}"></td><td><button id="fjbutton40" class="j" onclick="fjb40()">点此修改</button></td></tr>
+              </table>
+          </div>
+          <div id="tfdiv01" style="display: none">
+              <div id="tfdiv02" style="position: absolute;top: 5%;height: 5%;left: 10%;width: 10%;background: #9fefc3;border-radius: 10px;" onclick="tf01()">
+                  <p style="position:absolute;top: -40%;left:30%;color: white;font-size: 18px;font-weight: bold">正常退房</p>
+              </div>
+              <div id="tfdiv03" style="position: absolute;top: 5%;height: 5%;left: 20%;width: 10%;background: #fc0000;border-radius: 10px;" onclick="tf02()">
+                  <p style="position:absolute;top: -40%;left:26%;color: white;font-size: 18px;font-weight: bold">非正常退房</p>
+              </div>
+              <div style="position: absolute;top: 10%;left: 10%;width: 80%;height: 80%;border: 5px solid #8e8e8e">
+                  <div id="tfdiv04" style="display: block">
+                      <table border="5" style="position: absolute;top: 5%;left: 5%;width: 90%;height: 70%;">
+                          <th>用户名</th><th>房间号</th><th>到期时间</th><th>状态</th>
+                          <tr th:each="tf:${tfxx}">
+                              <td style="text-align: center" th:text="${tf.getRoomuser()}"></td>
+                              <td style="text-align: center" th:text="${tf.getRoomnum()}"></td>
+                              <td style="text-align: center" th:text="${tf.getEndtime()}"></td>
+                              <td style="text-align: center" th:text="${tf.getStatus()}" class="status"></td>
+                          </tr>
+                      </table>
+                      <button onclick="tfqc()" style="position: absolute;top: 80%;left: 40%;width: 20%;height: 10%;border-radius:15px;color: white;background: green">清除所有到期用户信息</button>
+                  </div>
+                  <div id="tfdiv05" style="display: none">
+                      <p style="text-align: center;font-size: 24px">用户退房登记</p>
+                      <div id="tfdiv06" style="position: absolute;top: 10%;left: 10%;height: 80%;width: 80%;border: 5px solid #8e8e8e;background: #e5e5e5">
+                          <img th:src="@{/static/img/fangwuguanli/f.png}" style="position: absolute;top: 30%;left: 10%;width: 200px;height: 200px;border-radius: 100%">
+                          <span style="position: absolute;font-size: 16px;top: 5%;left: 20%;">选择房间号:</span>
+                          <select id="tfselect01" style="position: absolute;top: 5%;left: 30%;height: 6%;width: 15%;background: deepskyblue;border-radius: 10px;color: white" onchange="stf01()">
+                              <option>101</option><option>102</option><option>103</option><option>104</option><option>105</option><option>106</option><option>107</option><option>108</option><option>109</option><option>110</option>
+                              <option>201</option><option>202</option><option>203</option><option>204</option><option>205</option><option>206</option><option>207</option><option>208</option><option>209</option><option>210</option>
+                              <option>301</option><option>302</option><option>303</option><option>304</option><option>305</option><option>306</option><option>307</option><option>308</option><option>309</option><option>310</option>
+                              <option>401</option><option>402</option><option>403</option><option>404</option><option>405</option><option>406</option><option>407</option><option>408</option><option>409</option><option>410</option>
+                          </select>
+                          <table border="1" style="position: absolute;top: 35%;left: 30%;height: 30%;width: 60%">
+                              <tr style="font-size: 24px;font-weight: bold;text-align: center">
+                                  <td>房间号</td>
+                                  <td>用户名</td>
+                                  <td>结束时间</td>
+                              </tr>
+                              <tr style="font-size: 24px;text-align: center">
+                                  <td id="tftd01">NULL</td>
+                                  <td id="tftd02">NULL</td>
+                                  <td id="tftd03">NULL</td>
+                              </tr>
+                          </table>
+                          <button style="position: absolute;top: 80%;left: 40%;width: 20%;height: 10%;background: green;border-radius: 5px;color: white;" onclick="sqtf()">申请退房</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="rzxfdiv" style="display: none">
+              <span style="position: absolute;left: 40%;top: 10%;font-size: 18px">姓名:</span>
+              <span style="position: absolute;left: 40%;top: 20%;font-size: 18px">性别:</span>
+              <span style="position: absolute;left: 40%;top: 30%;font-size: 18px">身份证号:</span>
+              <span style="position: absolute;left: 40%;top: 40%;font-size: 18px">手机号:</span>
+              <span style="position: absolute;left: 40%;top: 50%;font-size: 18px">入住房间类型:</span>
+              <span style="position: absolute;left: 40%;top: 60%;font-size: 18px">选择房间号:</span>
+              <span style="position: absolute;left: 40%;top: 70%;font-size: 18px">起始时间:</span>
+              <span style="position: absolute;left: 40%;top: 80%;font-size: 18px">终止时间:</span>
+              <input type="text" id="rzinput01">
+              <input type="text" id="rzinput02">
+              <input type="text" id="rzinput03">
+              <input type="text" id="rzinput04">
+              <select id="rzselect01" onchange="rzchangge()">
+                  <option th:each="rzs:${rz01}" th:text="${rzs}"></option>
+              </select>
+              <select id="rzselect02">
+              </select>
+              <input type="date" id="rzinput05">
+              <input type="date" id="rzinput06">
+              <button id="rzb01" onclick="rztoget()">确定</button>
+          </div>
+      </div>
+        <div id="fwgldiv06">
+            <p id="fwglp01" style="text-align: center">房态</p>
+        </div>
+    </div>
+    <div id="tc01" class="tc001">
+       <a class="tca01" onclick="tc1()">x</a><button class="tcb01" onclick="tcb01()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">101</span><span class="tcp03">修改房间类型:</span><select id="tcs01" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc02" class="tc001">
+        <a class="tca01" onclick="tc2()">x</a><button class="tcb01" onclick="tcb02()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">102</span><span class="tcp03">修改房间类型:</span><select id="tcs02" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc03" class="tc001">
+        <a class="tca01" onclick="tc3()">x</a><button class="tcb01" onclick="tcb03()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">103</span><span class="tcp03">修改房间类型:</span><select id="tcs03" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc04" class="tc001">
+        <a class="tca01" onclick="tc4()">x</a><button class="tcb01" onclick="tcb04()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">104</span><span class="tcp03">修改房间类型:</span><select id="tcs04" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc05" class="tc001">
+        <a class="tca01" onclick="tc5()">x</a><button class="tcb01" onclick="tcb05()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">105</span><span class="tcp03">修改房间类型:</span><select id="tcs05" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc06" class="tc001">
+        <a class="tca01" onclick="tc6()">x</a><button class="tcb01" onclick="tcb06()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">106</span><span class="tcp03">修改房间类型:</span><select id="tcs06" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc07" class="tc001">
+        <a class="tca01" onclick="tc7()">x</a><button class="tcb01" onclick="tcb07()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">107</span><span class="tcp03">修改房间类型:</span><select id="tcs07" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc08" class="tc001">
+        <a class="tca01" onclick="tc8()">x</a><button class="tcb01" onclick="tcb08()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">108</span><span class="tcp03">修改房间类型:</span><select id="tcs08" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc09" class="tc001">
+        <a class="tca01" onclick="tc9()">x</a><button class="tcb01" onclick="tcb09()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">109</span><span class="tcp03">修改房间类型:</span><select id="tcs09" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc10" class="tc001">
+        <a class="tca01" onclick="tc10()">x</a><button class="tcb01" onclick="tcb10()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">110</span><span class="tcp03">修改房间类型:</span><select id="tcs10" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc11" class="tc001">
+        <a class="tca01" onclick="tc11()">x</a><button class="tcb01" onclick="tcb11()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">201</span><span class="tcp03">修改房间类型:</span><select id="tcs11" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc12" class="tc001">
+        <a class="tca01" onclick="tc12()">x</a><button class="tcb01" onclick="tcb12()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">202</span><span class="tcp03">修改房间类型:</span><select id="tcs12" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc13" class="tc001">
+        <a class="tca01" onclick="tc13()">x</a><button class="tcb01" onclick="tcb13()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">203</span><span class="tcp03">修改房间类型:</span><select id="tcs13" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc14" class="tc001">
+        <a class="tca01" onclick="tc14()">x</a><button class="tcb01" onclick="tcb14()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">204</span><span class="tcp03">修改房间类型:</span><select id="tcs14" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc15" class="tc001">
+        <a class="tca01" onclick="tc15()">x</a><button class="tcb01" onclick="tcb15()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">205</span><span class="tcp03">修改房间类型:</span><select id="tcs15" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc16" class="tc001">
+        <a class="tca01" onclick="tc16()">x</a><button class="tcb01" onclick="tcb16()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">206</span><span class="tcp03">修改房间类型:</span><select id="tcs16" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc17" class="tc001">
+        <a class="tca01" onclick="tc17()">x</a><button class="tcb01" onclick="tcb17()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">207</span><span class="tcp03">修改房间类型:</span><select id="tcs17" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc18" class="tc001">
+        <a class="tca01" onclick="tc18()">x</a><button class="tcb01" onclick="tcb18()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">208</span><span class="tcp03">修改房间类型:</span><select id="tcs18" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc19" class="tc001">
+        <a class="tca01" onclick="tc19()">x</a><button class="tcb01" onclick="tcb19()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">209</span><span class="tcp03">修改房间类型:</span><select id="tcs19" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc20" class="tc001">
+        <a class="tca01" onclick="tc20()">x</a><button class="tcb01" onclick="tcb20()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">210</span><span class="tcp03">修改房间类型:</span><select id="tcs20" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc21" class="tc001">
+        <a class="tca01" onclick="tc21()">x</a><button class="tcb01" onclick="tcb21()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">301</span><span class="tcp03">修改房间类型:</span><select id="tcs21" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc22" class="tc001">
+        <a class="tca01" onclick="tc22()">x</a><button class="tcb01" onclick="tcb22()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">302</span><span class="tcp03">修改房间类型:</span><select id="tcs22" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc23" class="tc001">
+        <a class="tca01" onclick="tc23()">x</a><button class="tcb01" onclick="tcb23()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">303</span><span class="tcp03">修改房间类型:</span><select id="tcs23" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc24" class="tc001">
+        <a class="tca01" onclick="tc24()">x</a><button class="tcb01" onclick="tcb24()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">304</span><span class="tcp03">修改房间类型:</span><select id="tcs24" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc25" class="tc001">
+        <a class="tca01" onclick="tc25()">x</a><button class="tcb01" onclick="tcb25()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">305</span><span class="tcp03">修改房间类型:</span><select id="tcs25" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc26" class="tc001">
+        <a class="tca01" onclick="tc26()">x</a><button class="tcb01" onclick="tcb26()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">306</span><span class="tcp03">修改房间类型:</span><select id="tcs26" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc27" class="tc001">
+        <a class="tca01" onclick="tc27()">x</a><button class="tcb01" onclick="tcb27()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">307</span><span class="tcp03">修改房间类型:</span><select id="tcs27" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc28" class="tc001">
+        <a class="tca01" onclick="tc28()">x</a><button class="tcb01" onclick="tcb28()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">308</span><span class="tcp03">修改房间类型:</span><select id="tcs28" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc29" class="tc001">
+        <a class="tca01" onclick="tc29()">x</a><button class="tcb01" onclick="tcb29()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">309</span><span class="tcp03">修改房间类型:</span><select id="tcs29" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc30" class="tc001">
+        <a class="tca01" onclick="tc30()">x</a><button class="tcb01" onclick="tcb30()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">310</span><span class="tcp03">修改房间类型:</span><select id="tcs30" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc31" class="tc001">
+        <a class="tca01" onclick="tc31()">x</a><button class="tcb01" onclick="tcb31()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">401</span><span class="tcp03">修改房间类型:</span><select id="tcs31" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc32" class="tc001">
+        <a class="tca01" onclick="tc32()">x</a><button class="tcb01" onclick="tcb32()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">402</span><span class="tcp03">修改房间类型:</span><select id="tcs32" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc33" class="tc001">
+        <a class="tca01" onclick="tc33()">x</a><button class="tcb01" onclick="tcb33()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">403</span><span class="tcp03">修改房间类型:</span><select id="tcs33" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc34" class="tc001">
+        <a class="tca01" onclick="tc34()">x</a><button class="tcb01" onclick="tcb34()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">404</span><span class="tcp03">修改房间类型:</span><select id="tcs34" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc35" class="tc001">
+        <a class="tca01" onclick="tc35()">x</a><button class="tcb01" onclick="tcb35()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">405</span><span class="tcp03">修改房间类型:</span><select id="tcs35" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc36" class="tc001">
+        <a class="tca01" onclick="tc36()">x</a><button class="tcb01" onclick="tcb36()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">406</span><span class="tcp03">修改房间类型:</span><select id="tcs36" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc37" class="tc001">
+        <a class="tca01" onclick="tc37()">x</a><button class="tcb01" onclick="tcb37()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">407</span><span class="tcp03">修改房间类型:</span><select id="tcs37" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc38" class="tc001">
+        <a class="tca01" onclick="tc38()">x</a><button class="tcb01" onclick="tcb38()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">408</span><span class="tcp03">修改房间类型:</span><select id="tcs38" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc39" class="tc001">
+        <a class="tca01" onclick="tc39()">x</a><button class="tcb01" onclick="tcb39()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">409</span><span class="tcp03">修改房间类型:</span><select id="tcs39" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="tc40" class="tc001">
+        <a class="tca01" onclick="tc40()">x</a><button class="tcb01" onclick="tcb40()">确认修改</button>
+        <span class="tcp01">当前房间号:</span><span class="tcp02">410</span><span class="tcp03">修改房间类型:</span><select id="tcs40" class="tcs01"><option th:each="fjlxs:${fjlx}" th:value="${fjlxs}" th:text="${fjlxs}"></option></select>
+    </div>
+    <div id="fwdiv01">
+        <div id="fwdiv02">
+           <p style="position: absolute;top: 5%;left: 15%;font-size: 24px;font-weight: bold;">用户信息一览</p>
+            <img th:src="@{/static/img/fangwuguanli/f.png}" style="position: absolute;top: 35%;left: 5%;width: 90%;height: 38%;border-radius: 100%">
+        </div>
+        <p class="fwp" id="fwpp01"></p>
+        <p class="fwp" id="fwpp02"></p>
+        <p id="fwpp03"></p>
+        <p class="fwp" id="fwpp04"></p>
+        <p id="fwpp05"></p>
+        <p id="fwpp06"></p>
+        <span style="position: absolute;top: 2%;left: 96%;font-size: 24px" onclick="up()">X</span>
+    </div>
+</div>
+</body>
+</html>

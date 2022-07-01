@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../static/js/JqueryAjax/JQuery.js" type="text/javascript"></script>
+    <link th:href="@{/static/css/xx.css}" rel="stylesheet">
+    <script th:src="@{/static/js/TestJs/xx.js}" type="text/javascript"></script>
+</head>
+<body>
+<a href="/guanlicenter_index" style="position: absolute;top: 3%;left: 95%;">点此退出</a>
+<button style="position: absolute;top: 15%;left: 15%;height: 16%;width: 8%;background: #efcd16;" onclick="xx01()">
+    <p style="font-size: 30px;position: absolute;top: 16%;left: 10%">用户信息</p>
+</button>
+<button style="position: absolute;top: 38%;left: 15%;height: 16%;width: 8%;background: #c5f833;" onclick="xx02()">
+    <p style="font-size: 30px;position: absolute;top: 16%;left: 10%">用户日志</p>
+</button>
+<button style="position: absolute;top: 61%;left: 15%;height: 16%;width: 8%;background: #00fc5b;" onclick="xx03()">
+    <p style="font-size: 30px;position: absolute;top: 16%;left: 10%">系统日志</p>
+</button>
+<div id="xxdiv01">
+   <div id="yhxx" style="display: block">
+       <div  class="xxdiv02" th:each="um:${usermessage}">
+           <span class="xxp01" th:text="'用户：'+${um.getUser()}"></span>
+           <span class="xxp02" th:text="'房间：'+${um.getRoom()}"></span>
+           <p class="xxp03" th:text="'用户反馈：'+${um.getUsercalls()}"></p>
+           <button class="xxbs" style="position: absolute;top: 10%;left: 85%;width: 10%;height: 20%;background: red;color:white;border-radius: 10px" th:value="${um.getRoom()}" onclick="scxx(this)">删除此信息</button>
+       </div>
+   </div>
+    <div id="yhrz" style="display: none">
+         <p style="position: absolute;top: 3%;left: 10%;font-size: 18px">搜索:</p>
+         <p style="position: absolute;top: 3%;left: 30%;font-size: 18px">用户:</p>
+        <input id="xxinput01" type="text" style="position: absolute;top: 5%;width: 15%;height: 5%;left: 35%">
+        <button id="xxb01" onclick="xx04()">查询</button>
+        <table class="xxt01" style="position: absolute;top: 15%;left: 5%;">
+            <th>用户名</th><th>房间号</th><th>花费</th><th>入住时间</th><th>截至时间</th>
+            <tr th:each="uls:${userlog}">
+                <td th:text="${uls.getUsername()}"></td>
+                <td th:text="${uls.getRoomnum()}"></td>
+                <td th:text="${uls.getCost()}"></td>
+                <td th:text="${uls.getStarttime()}"></td>
+                <td th:text="${uls.getEndtime()}"></td>
+            </tr>
+        </table>
+        <span style="position: absolute;top: 95%;left: 10%;color: blue" onclick="toup()">上一页</span><span style="position: absolute;top: 95%;left: 80%;color: blue" onclick="todown()">下一页</span>
+        <span id="xxspan01" style="position: absolute;top: 95%;left: 60%;" th:text="'共'+${number1}+'页'"></span>
+        <span id="xxspan03" style="position: absolute;top: 95%;left: 35%;">第1页</span>
+    </div>
+    <div id="xtrz" style="display: none">
+        <p style="position: absolute;top: 3%;left: 10%;font-size: 18px">搜索:</p>
+        <p style="position: absolute;top: 3%;left: 30%;font-size: 18px">状态:</p>
+        <input id="xxinput02" type="text" style="position: absolute;top: 5%;width: 15%;height: 5%;left: 35%">
+        <button id="xxb02" onclick="xx05()">查询</button>
+        <table class="xxt02" style="position: absolute;top: 15%;left: 5%;">
+            <th>状态号</th><th>方法信息</th><th>状态Common/Null/error</th><th>方法时间</th>
+            <tr th:each="us:${log}">
+                <td th:text="${us.getStatus()}"></td>
+                <td th:text="${us.getMessage()}"></td>
+                <td th:text="${us.getEvent()}"></td>
+                <td th:text="${us.getTime()}"></td>
+            </tr>
+        </table>
+        <span style="position: absolute;top: 95%;left: 10%;color: blue" onclick="toup2()">上一页</span><span style="position: absolute;top: 95%;left: 80%;color: blue" onclick="todown2()">下一页</span>
+        <span id="xxspan02" style="position: absolute;top: 95%;left: 60%;" th:text="'共'+${number2}+'页'"></span>
+        <span id="xxspan04" style="position: absolute;top: 95%;left: 35%;">第1页</span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.xxDao">
+   <select id="returncall" resultType="com.zmh.demo.pojo.Call">
+       select user,room,usercalls from bishe_usercall;
+   </select>
+    <delete id="toscxxs">
+        delete from bishe_usercall where room=#{room} and usercalls=#{message};
+    </delete>
+    <select id="returnUserrLog" resultType="com.zmh.demo.pojo.UserLog">
+        select username,roomnum,cost,starttime,endtime from bishe_user_log order by log_id desc limit 0,15;
+    </select>
+    <select id="returnUserLogpass" resultType="com.zmh.demo.pojo.UserLog">
+        select username,roomnum,cost,starttime,endtime from bishe_user_log where username like concat('%','${user}','%') order by log_id desc limit 0,15;
+    </select>
+    <select id="countUserLog" resultType="int">
+        select count(*) from bishe_user_log;
+    </select>
+    <select id="returndownLog" resultType="com.zmh.demo.pojo.UserLog" parameterType="int">
+        select username,roomnum,cost,starttime,endtime from bishe_user_log order by log_id desc limit ${num},15;
+    </select>
+    <select id="returndownLogAs" resultType="com.zmh.demo.pojo.UserLog">
+        select username,roomnum,cost,starttime,endtime from bishe_user_log where username=#{user} order by log_id desc limit ${num},15;
+    </select>
+    <select id="countUserLog2" resultType="int">
+        select count(*) from bishe_log;
+    </select>
+    <select id="returnLog" resultType="com.zmh.demo.pojo.Log">
+        select status,message,event,time from bishe_log order by log_id desc limit 0,15;
+    </select>
+    <select id="returnUserLogpass2" resultType="com.zmh.demo.pojo.Log" parameterType="String">
+        select status,message,event,time from bishe_log where event=#{status} order by log_id desc limit 0,15;
+    </select>
+    <select id="returndownLog2" resultType="com.zmh.demo.pojo.Log" parameterType="int">
+        select status,message,event,time from bishe_log order by log_id desc limit ${num},15;
+    </select>
+    <select id="returndownLogAs2" resultType="com.zmh.demo.pojo.Log">
+        select status,message,event,time from bishe_log where event=#{status} order by log_id desc limit ${num},15;
+    </select>
+</mapper>

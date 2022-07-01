@@ -1,0 +1,223 @@
+.guanyudiv02{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+}
+.guanyuimg02{
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.guanyup01{
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    font-size: 60px;
+    color: #000000;
+    font-family: cursive;
+    font-weight: bold;
+}
+.guanyup02{
+    position: absolute;
+    top: 26%;
+    left: 63%;
+    font-size: 60px;
+    color: #000000;
+    font-family: cursive;
+    font-weight: bold;
+}
+.guanyuimg01{
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    width: 10%;
+    height: 20%;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.guanyuimg01:hover{
+    transform: scale(1.2);
+}
+.guanyua01{
+    position: absolute;
+    top: 2%;
+    left: 93%;
+    font-size: 24px;
+    color: coral;
+}
+.guanyudiv03{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #f1f1f1;
+    top: 70%;
+    text-align: center;
+    font-family: Arial;
+    color: #000000;
+}
+.guanyudiv004{
+    position: absolute;
+    top: 120%;
+    width: 100%;
+    height: 50%;
+    background-image: url("/static/img/guanyuwomen/i.jpg");
+}
+.guanyudiv005{
+    position: absolute;
+    top: 170%;
+    width: 100%;
+    height: 50%;
+    background: darkgrey;
+}
+.guanyudiv006{
+    position: absolute;
+    top: 140%;
+    left: 30%;
+    width: 70%;
+    height: 80%;
+    background: #212121;
+}
+.guanyudiv01{
+    position: absolute;
+    top: 140%;
+    left: 30%;
+    width: 30%;
+    height: 26%;
+    overflow: hidden;
+}
+.guanyudiv01 img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.guanyudiv01 img:hover{
+    transform: scale(1.2);
+}
+.guanyudiv07{
+    position: absolute;
+    top: 140%;
+    left: 60%;
+    width: 40%;
+    height: 26%;
+    background: #404040;
+    text-align: center;
+    font-size: 48px;
+    color: white;
+}
+.guanyudiv007{
+    position: absolute;
+    top: 166%;
+    left: 70%;
+    width: 30%;
+    height: 26%;
+    overflow: hidden;
+}
+.guanyudiv007 img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.guanyudiv007 img:hover{
+    transform: scale(1.2);
+}
+.guanyudiv08{
+    position: absolute;
+    top: 166%;
+    left: 30%;
+    width: 40%;
+    height: 26%;
+    background: #404040;
+    text-align: center;
+    font-size: 48px;
+    color: white;
+}
+.guanyudiv008{
+    position: absolute;
+    top: 192%;
+    left: 30%;
+    width: 30%;
+    height: 28%;
+    overflow: hidden;
+}
+.guanyudiv008 img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.guanyudiv008 img:hover{
+    transform: scale(1.2);
+}
+.guanyudiv09{
+    position: absolute;
+    top: 192%;
+    left: 60%;
+    width: 40%;
+    height: 28%;
+    background: #404040;
+    text-align: center;
+    font-size: 48px;
+    color: white;
+}
+.guanyudiv009{
+    position: absolute;
+    top: 220%;
+    width: 100%;
+    height: 70%;
+}
+.guanyudiv10{
+    position: absolute;
+    top: 290%;
+    width: 100%;
+    height: 50%;
+    background: #9fa8ef;
+}
+.guanyuspan13{
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    font-size: 18px;
+}
+.guanyuspan14{
+    position: absolute;
+    top: 75%;
+    left: 80%;
+    font-size: 18px;
+}
+.guanyuspan15{
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    font-size: 18px;
+}
+.guanyuimg06{
+    position: absolute;
+    top: 28%;
+    left: 80%;
+    width: 10%;
+    height: 33%;
+}
+.guanyuspan16{
+    position: absolute;
+    top: 10%;
+    left: 77%;
+    font-size: 24px;
+}
+.guanyuimg07{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 70%;
+    height: 100%;
+}
+.guanyuimg08{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.guanyudiv009 img:hover{
+    transform: scale(0.98);
+}

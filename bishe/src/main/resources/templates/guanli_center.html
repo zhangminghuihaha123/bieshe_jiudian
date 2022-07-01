@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script th:src="@{/static/js/JqueryAjax/JQuery.js}" type="text/javascript"></script>
+    <link rel="stylesheet" th:href="@{/static/css/guanli_center.css}">
+    <script th:src="@{/static/js/TestJs/guanli_center.js}" type="text/javascript"></script>
+</head>
+<body>
+<div class="glydldiv01">
+    <img th:src="@{/static/img/guanli_center/o.jpg}" style="height: 100%;width: 100%">
+    <div id="glydldiv02">
+         <p id="glydldp01">管理中心</p>
+         <p id="glydldp02">查看当前用户</p>
+         <img id="glydlimg01" th:src="@{/static/img/guanli_center/a.png}" onclick="glydlda()">
+         <img id="glydlimg02" th:src="@{/static/img/guanli_center/b.png}" onclick="glydldb()">
+         <img id="glydlimg03" th:src="@{/static/img/guanli_center/c.png}" onclick="glydldc()">
+    </div>
+    <div id="glydldiv03" style="display: none">
+        <ul class="glydlul01">
+            <li th:text="${admins}" style="font-size: 12px;">未显示</li>
+        </ul>
+    </div>
+    <div id="glydldiv07">
+        <a href="../static/word/zmh.pdf" type="application/pdf" download="zmh.pdf"><img id="glydlimg12" th:src="@{/static/img/guanli_center/l.png}"></a>
+        <p style="position: absolute;left: 84%;top: 55%;font-size: 24px;">操作手册</p>
+        <img id="glydlimg13" th:src="@{/static/img/guanli_center/m.png}" onclick="tofwdh()">
+        <p style="position: absolute;left: 94%;top: 55%;font-size: 24px;">客服电话</p>
+    </div>
+    <div id="glydldiv04">
+        <img id="glydlimg14" th:src="@{/static/img/guanli_center/n.png}">
+        <div id="glydldiv05">
+            <p id="glydldp03" onclick="glydlde()">回到首页</p>
+        </div>
+        <div id="glydldiv15">
+            <p id="glydldp04" onclick="glydldf()">前台营业</p>
+        </div>
+        <div id="glydldiv16">
+            <p id="glydldp05" onclick="glydldi()">库存管理</p>
+        </div>
+        <div id="glydldiv17">
+            <p id="glydldp06" onclick="glydldk()">财务管理</p>
+        </div>
+        <div id="glydldiv18">
+            <p id="glydldp07" onclick="glydldg()">房务管理</p>
+        </div>
+        <div id="glydldiv19">
+            <p id="glydldp08" onclick="glydldj()">营销管理</p>
+        </div>
+        <div id="glydldiv20">
+            <p id="glydldp09" onclick="glydldh()">信息</p>
+        </div>
+        <div id="glydldiv06">
+
+        </div>
+        <img id="glydlimg04" th:src="@{/static/img/guanli_center/d.png}" onclick="glydldd()">
+    </div>
+    <div id="glydldiv08" onclick="glydldf()">
+        <img id="glydlimg05" th:src="@{/static/img/guanli_center/e.png}">
+        <p style="font-size: 24px;color: white;position: absolute;top: 60%;left: 30%">前台营业</p>
+    </div>
+    <div id="glydldiv09" onclick="glydldi()">
+        <img id="glydlimg06" th:src="@{/static/img/guanli_center/f.png}">
+        <p style="font-size: 24px;color: white;position: absolute;top: 60%;left: 30%">库存管理</p>
+    </div>
+    <div id="glydldiv10" onclick="glydldk()">
+        <img id="glydlimg07" th:src="@{/static/img/guanli_center/g.png}">
+        <p style="font-size: 24px;color: white;position: absolute;top: 60%;left: 30%">财务管理</p>
+    </div>
+    <div id="glydldiv11" onclick="glydldg()">
+        <img id="glydlimg08" th:src="@{/static/img/guanli_center/h.png}">
+        <p style="font-size: 24px;color: white;position: absolute;top: 60%;left: 30%">房务管理</p>
+    </div>
+    <div id="glydldiv12" onclick="glydldj()">
+        <img id="glydlimg09" th:src="@{/static/img/guanli_center/i.png}">
+        <p style="font-size: 24px;color: white;position: absolute;top: 60%;left: 30%">营销管理</p>
+    </div>
+    <div id="glydldiv13" onclick="glydldh()">
+        <img id="glydlimg10" th:src="@{/static/img/guanli_center/j.png}">
+        <p style="font-size: 24px;color: white;position: absolute;top: 60%;left: 36%">信息</p>
+        <div style="position: absolute;top: 10%;left: 80%;width: 10%;height: 15%;background: red;text-align: center;border-radius: 100%;">
+            <span style="text-align: center;color: whitesmoke" th:text="${number}"></span>
+        </div>
+    </div>
+    <div id="glydldiv14">
+        <img id="glydlimg11" th:src="@{/static/img/guanli_center/k.png}">
+        <span style="position: absolute;top: 45%;left: 20%;font-size: 36px;font-weight: bold">您当前有</span>
+        <span style="position: absolute;top: 45%;left: 60%;font-size: 36px;font-weight: bold">条信息</span>
+        <span th:text="${number}" style="position: absolute;top: 45%;left: 47%;font-size: 36px;color: red;font-weight: bold"></span>
+    </div>
+</div>
+</body>
+</html>

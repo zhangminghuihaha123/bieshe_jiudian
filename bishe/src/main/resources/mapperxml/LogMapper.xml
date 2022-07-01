@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.LogDao">
+
+    <insert id="LogInit" parameterType="com.zmh.demo.pojo.Log">
+        insert into bishe_log(status, message, event, time) VALUES (#{status},#{message},#{event},#{time});
+    </insert>
+</mapper>

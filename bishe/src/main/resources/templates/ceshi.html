@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="../static/js/JqueryAjax/JQuery.js" type="text/javascript"></script>
+    <style>
+        img{
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+        }
+        button{
+            position: absolute;
+            left: 20%;
+            top: 40%;
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+     <script type="text/javascript">
+         function a() {
+            $("#ceshi001").css("display","none");
+            $("#ceshi002").css("display","inline");
+         }
+         function b() {
+             $("#ceshi002").css("display","none");
+             $("#ceshi001").css("display","inline");
+         }
+         function c() {
+             if($("#ceshi001").css("display")=="block"){
+                 alert("true");
+             }else {
+                 alert("false");
+             }
+         }
+     </script>
+    <img src="../static/img/index/a.jpg" id="ceshi001" style="display: inline"  onclick="a()">
+    <img src="../static/img/index/b.jpg" id="ceshi002" style="display: none"  onclick="b()">
+    <button id="ceshi003" onclick="c()">选择这张图片</button>
+</body>
+</html>

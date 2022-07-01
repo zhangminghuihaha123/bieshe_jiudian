@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmh.demo.dao.qtyyDao">
+     <insert id="setroomStyle" parameterType="com.zmh.demo.pojo.Rooms">
+         insert into bishe_rooms(roomstyle, money, roomimg) VALUES (#{roomstyle},#{money},#{roomimg});
+     </insert>
+
+    <update id="updateroomStyle" parameterType="String">
+        update bishe_rooms set roomimg=#{path} where roomstyle=#{roomstyle};
+    </update>
+
+    <select id="returnroomstyle" resultType="String">
+        select roomstyle from bishe_rooms;
+    </select>
+
+    <insert id="setfoodStyle" parameterType="com.zmh.demo.pojo.Foods">
+        insert into bishe_foods(foodstyle, foodmoney, foodimg) VALUES (#{foodstyle},#{foodmoney},#{foodimg});
+    </insert>
+
+    <select id="returnfoodstyle" resultType="String">
+        select foodstyle from bishe_foods;
+    </select>
+
+    <update id="updatefoodStyle" parameterType="String">
+        update bishe_foods set foodimg=#{path} where foodstyle=#{foodstyle};
+    </update>
+
+    <select id="returnfiendsstyle" resultType="String">
+        select friendname from bishe_friends;
+    </select>
+
+    <insert id="setfriendStyle" parameterType="com.zmh.demo.pojo.Friends">
+        insert into bishe_friends(friendimg, friendname, friendmoney) VALUES (#{friendimg},#{friendname},#{friendmoney});
+    </insert>
+
+    <delete id="deletefriends" parameterType="String">
+        delete from bishe_friends where friendname=#{friendname};
+    </delete>
+
+    <select id="returnUserCallNum" resultType="int">
+        SELECT COUNT(*) FROM bishe_usercall;
+    </select>
+</mapper>

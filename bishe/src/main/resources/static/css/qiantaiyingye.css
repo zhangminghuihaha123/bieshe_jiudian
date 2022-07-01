@@ -1,0 +1,226 @@
+#qtyydiv01{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#qtyyimg01{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+#qtyyimg02{
+    position: absolute;
+    top: 12%;
+    left: 80%;
+    width: 3%;
+    height: 5%;
+}
+
+#qtyydiv02{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    border-radius: 10%;
+    background: white;
+    opacity: 0.9;
+}
+
+#qtyydiv03{
+     position: absolute;
+     top: 15%;
+     left: 5%;
+     height: 75%;
+     width: 90%;
+     border-radius: 2%;
+     border:solid 5px;
+ }
+
+#qtyyimg03{
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    width: 8%;
+    height: 21%;
+    opacity: 1.0;
+}
+#qtyyimg04{
+    position: absolute;
+    top: 5%;
+    left: 16%;
+    width: 8%;
+    height: 21%;
+    opacity: 0.3;
+}
+#qtyyimg05{
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    width: 8%;
+    height: 21%;
+    opacity: 0.3;
+}
+#qtyyp04,#qtyyp13,#qtyyp20{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-size: 24px;
+}
+#qtyyp09,#qtyyp16{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    font-size: 24px;
+}
+#file{
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+#files,#filess,#filesss,#filee{
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
+#qtyyimg06,#qtyyimg13,#qtyyimg17{
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    height: 25%;
+    width: 20%;
+}
+#qtyyimg09,#qtyyimg14{
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    height: 25%;
+    width: 20%;
+}
+#qtyyp05,#qtyyp14,#qtyyp21{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 24px;
+}
+#qtyyp10,#qtyyp17,#qtyyp23{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 24px;
+}
+#roomstyle,#foodstyle,#deletefriend{
+    position: absolute;
+    left: 20%;
+    top: 43%;
+    height: 8%;
+    width: 25%;
+}
+#roomstyles,#foodstyles,#friendname{
+    position: absolute;
+    left: 20%;
+    top: 43%;
+    height: 8%;
+    width: 25%;
+}
+#qtyyp06,#qtyyp15,#qtyyp22{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    font-size: 24px;
+}
+#roommoney,#foodmoney,#friendmoney{
+    position: absolute;
+    left: 20%;
+    top: 63%;
+    height: 8%;
+    width: 25%;
+}
+#qtyybutton01{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    width: 10%;
+    height: 10%;
+}
+#qtyybutton02,#qtyybutton03,#qtyybutton04,#qtyybutton05,#qtyybutton06{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    width: 10%;
+    height: 10%;
+}
+#qtyyimg07{
+    transform: rotate(90deg);
+    position: absolute;
+    left: -7%;
+    top: -20%;
+    width: 5%;
+    height: 60%;
+}
+#qtyyimg08{
+    transform: rotate(90deg);
+    position: absolute;
+    left: -5%;
+    top: 10%;
+    width: 5%;
+    height: 40%;
+}
+#qtyyimg11,#qtyyimg15{
+    transform: rotate(90deg);
+    position: absolute;
+    left: -7%;
+    top: -20%;
+    width: 5%;
+    height: 60%;
+}
+#qtyyimg12,#qtyyimg16{
+    transform: rotate(90deg);
+    position: absolute;
+    left: -5%;
+    top: 10%;
+    width: 5%;
+    height: 40%;
+}
+#qtyyp07{
+    position: absolute;
+    top: 4%;
+    left: -10%;
+    font-size: 18px;
+}
+#qtyyp08{
+    position: absolute;
+    top: 24%;
+    left: -10%;
+    font-size: 18px;
+}
+#qtyyp11,#qtyyp18{
+    position: absolute;
+    top: 4%;
+    left: -10%;
+    font-size: 18px;
+}
+#qtyyp12,#qtyyp19{
+    position: absolute;
+    top: 24%;
+    left: -10%;
+    font-size: 18px;
+}
+#qtyyspan01{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-size: 24px;
+}
+#qtyyspan02,#qtyyspan03,#qtyyspan04,#qtyyspan05,#qtyyspan06{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    font-size: 24px;
+}
